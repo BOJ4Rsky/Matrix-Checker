@@ -1,0 +1,4692 @@
+{
+  "pageName": "Article 2024",
+  "startOffset": 9,
+  "interOffset": 0,
+  "components": [
+    {
+      "name": "SEO",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "color": "#FFA500",
+          "line": 9
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "color": "#808080",
+          "line": 10
+        },
+        {
+          "name": "CMS Title",
+          "type": "Not Empty",
+          "required": true,
+          "line": 11
+        },
+        {
+          "name": "Meta Title",
+          "type": "Not Empty",
+          "required": true,
+          "minLength": "40",
+          "maxLength": "70",
+          "line": 12
+        },
+        {
+          "name": "Meta description",
+          "type": "Not Empty",
+          "required": true,
+          "minLength": "100",
+          "maxLength": "170",
+          "line": 13
+        },
+        {
+          "name": "URL alias",
+          "type": "URL",
+          "required": true,
+          "line": 14
+        },
+        {
+          "name": "Keywords",
+          "type": "Not Empty",
+          "required": false,
+          "line": 15
+        },
+        {
+          "name": "Content Reference ID",
+          "type": "Not Empty",
+          "required": true,
+          "line": 16
+        }
+      ],
+      "startLine": 9
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 17
+        }
+      ],
+      "startLine": 17
+    },
+    {
+      "name": "Article Tags",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 18
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 19
+        },
+        {
+          "name": "Tags",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "line": 20
+        },
+        {
+          "name": "Teaser description",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "line": 21
+        },
+        {
+          "name": "Read Time",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "line": 22
+        },
+        {
+          "name": "Category",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "line": 23
+        },
+        {
+          "name": "Horizontal Reference Image",
+          "type": "Image",
+          "required": true,
+          "draggingAlt": false,
+          "line": 24
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "draggingAlt": false,
+          "line": 25
+        },
+        {
+          "name": "Square Reference Image",
+          "type": "Image",
+          "required": true,
+          "draggingAlt": false,
+          "line": 26
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "draggingAlt": false,
+          "line": 27
+        },
+        {
+          "name": "Vertical Reference Image",
+          "type": "Image",
+          "required": true,
+          "draggingAlt": false,
+          "line": 28
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "draggingAlt": false,
+          "line": 29
+        },
+        {
+          "name": "Video thumbnail Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 30
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "line": 31
+        },
+        {
+          "name": "Video URL",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 32
+        },
+        {
+          "name": "Pillar pages Reference 1",
+          "type": "YES/NO",
+          "required": true,
+          "draggingAlt": false,
+          "line": 33
+        },
+        {
+          "name": "Pillar pages Reference 2",
+          "type": "YES/NO",
+          "required": true,
+          "draggingAlt": false,
+          "line": 34
+        },
+        {
+          "name": "Pillar pages Reference 3",
+          "type": "YES/NO",
+          "required": true,
+          "draggingAlt": false,
+          "line": 35
+        }
+      ],
+      "startLine": 18
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 36
+        }
+      ],
+      "startLine": 36
+    },
+    {
+      "name": "Article Hero Banner",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 37
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 38
+        },
+        {
+          "name": "Background pattern",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "line": 39
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "85",
+          "line": 40
+        },
+        {
+          "name": "Sub title",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 41
+        },
+        {
+          "name": "Description",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "400",
+          "line": 42
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 43
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 44
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 45
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 46
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 47
+        },
+        {
+          "name": "Secondary Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "seo": false,
+          "line": 48
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 49
+        }
+      ],
+      "startLine": 37
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 50
+        }
+      ],
+      "startLine": 50
+    },
+    {
+      "name": "Audio component",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 51
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 52
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "45",
+          "line": 53
+        },
+        {
+          "name": "Audio file",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 54
+        },
+        {
+          "name": "Left Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 55
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 56
+        },
+        {
+          "name": "Right Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 57
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 58
+        }
+      ],
+      "required": false,
+      "startLine": 51
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 59
+        }
+      ],
+      "startLine": 59
+    },
+    {
+      "name": "Image divider",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 60
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 61
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "seo": false,
+          "line": 62
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 63
+        }
+      ],
+      "required": false,
+      "startLine": 60
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 64
+        }
+      ],
+      "startLine": 64
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 65
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 66
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": true,
+          "draggingAlt": false,
+          "line": 67
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 68
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": true,
+          "draggingAlt": false,
+          "line": 69
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 70
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 71
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "line": 72
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 73
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 74
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 75
+        }
+      ],
+      "startLine": 65
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 76
+        }
+      ],
+      "startLine": 76
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 77
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 78
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": true,
+          "draggingAlt": false,
+          "line": 79
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 80
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": true,
+          "draggingAlt": false,
+          "line": 81
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 82
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 83
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "line": 84
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 85
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 86
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 87
+        }
+      ],
+      "startLine": 77
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 88
+        }
+      ],
+      "startLine": 88
+    },
+    {
+      "name": "Quotes",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 89
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 90
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "200",
+          "line": 91
+        },
+        {
+          "name": "Author",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 92
+        },
+        {
+          "name": "Location",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 93
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 94
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 95
+        }
+      ],
+      "required": false,
+      "startLine": 89
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 96
+        }
+      ],
+      "startLine": 96
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 97
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 98
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 99
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 100
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 101
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 102
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 103
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 104
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 105
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 106
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 107
+        }
+      ],
+      "required": false,
+      "startLine": 97
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 108
+        }
+      ],
+      "startLine": 108
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 109
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 110
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 111
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 112
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 113
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 114
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 115
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 116
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 117
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 118
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 119
+        }
+      ],
+      "required": false,
+      "startLine": 109
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 120
+        }
+      ],
+      "startLine": 120
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 121
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 122
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 123
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 124
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 125
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 126
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 127
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 128
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 129
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 130
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 131
+        }
+      ],
+      "required": false,
+      "startLine": 121
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 132
+        }
+      ],
+      "startLine": 132
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 133
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 134
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 135
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 136
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 137
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 138
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 139
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 140
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 141
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 142
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 143
+        }
+      ],
+      "required": false,
+      "startLine": 133
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 144
+        }
+      ],
+      "startLine": 144
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 145
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 146
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 147
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 148
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 149
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 150
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 151
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 152
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 153
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 154
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 155
+        }
+      ],
+      "required": false,
+      "startLine": 145
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 156
+        }
+      ],
+      "startLine": 156
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 157
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 158
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 159
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 160
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 161
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 162
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 163
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 164
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 165
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 166
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 167
+        }
+      ],
+      "required": false,
+      "startLine": 157
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 168
+        }
+      ],
+      "startLine": 168
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 169
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 170
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 171
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 172
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 173
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 174
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 175
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 176
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 177
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 178
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 179
+        }
+      ],
+      "required": false,
+      "startLine": 169
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 180
+        }
+      ],
+      "startLine": 180
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 181
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 182
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 183
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 184
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 185
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 186
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 187
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 188
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 189
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 190
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 191
+        }
+      ],
+      "required": false,
+      "startLine": 181
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 192
+        }
+      ],
+      "startLine": 192
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 193
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 194
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 195
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 196
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 197
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 198
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 199
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 200
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 201
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 202
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 203
+        }
+      ],
+      "required": false,
+      "startLine": 193
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 204
+        }
+      ],
+      "startLine": 204
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 205
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 206
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 207
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 208
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 209
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 210
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 211
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 212
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 213
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 214
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 215
+        }
+      ],
+      "required": false,
+      "startLine": 205
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 216
+        }
+      ],
+      "startLine": 216
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 217
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 218
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 219
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 220
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 221
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 222
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 223
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 224
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 225
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 226
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 227
+        }
+      ],
+      "required": false,
+      "startLine": 217
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 228
+        }
+      ],
+      "startLine": 228
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 229
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 230
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 231
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 232
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 233
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 234
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 235
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 236
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 237
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 238
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 239
+        }
+      ],
+      "required": false,
+      "startLine": 229
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 240
+        }
+      ],
+      "startLine": 240
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 241
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 242
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 243
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 244
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 245
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 246
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 247
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 248
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 249
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 250
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 251
+        }
+      ],
+      "required": false,
+      "startLine": 241
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 252
+        }
+      ],
+      "startLine": 252
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 253
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 254
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 255
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 256
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 257
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 258
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 259
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 260
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 261
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 262
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 263
+        }
+      ],
+      "required": false,
+      "startLine": 253
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 264
+        }
+      ],
+      "startLine": 264
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 265
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 266
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 267
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 268
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 269
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 270
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 271
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 272
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 273
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 274
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 275
+        }
+      ],
+      "required": false,
+      "startLine": 265
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 276
+        }
+      ],
+      "startLine": 276
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 277
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 278
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 279
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 280
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 281
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 282
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 283
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 284
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 285
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 286
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 287
+        }
+      ],
+      "required": false,
+      "startLine": 277
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 288
+        }
+      ],
+      "startLine": 288
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 289
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 290
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 291
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 292
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 293
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 294
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 295
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 296
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 297
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 298
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 299
+        }
+      ],
+      "required": false,
+      "startLine": 289
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 300
+        }
+      ],
+      "startLine": 300
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 301
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 302
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 303
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 304
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 305
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 306
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 307
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 308
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 309
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 310
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 311
+        }
+      ],
+      "required": false,
+      "startLine": 301
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 312
+        }
+      ],
+      "startLine": 312
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 313
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 314
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 315
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 316
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 317
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 318
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 319
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 320
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 321
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 322
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 323
+        }
+      ],
+      "required": false,
+      "startLine": 313
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 324
+        }
+      ],
+      "startLine": 324
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 325
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 326
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 327
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 328
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 329
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 330
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 331
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 332
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 333
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 334
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 335
+        }
+      ],
+      "required": false,
+      "startLine": 325
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 336
+        }
+      ],
+      "startLine": 336
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 337
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 338
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 339
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 340
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 341
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 342
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 343
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 344
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 345
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 346
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 347
+        }
+      ],
+      "required": false,
+      "startLine": 337
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 348
+        }
+      ],
+      "startLine": 348
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 349
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 350
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 351
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 352
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 353
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 354
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 355
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 356
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 357
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 358
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 359
+        }
+      ],
+      "required": false,
+      "startLine": 349
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 360
+        }
+      ],
+      "startLine": 360
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 361
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 362
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 363
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 364
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 365
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 366
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 367
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 368
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 369
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 370
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 371
+        }
+      ],
+      "required": false,
+      "startLine": 361
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 372
+        }
+      ],
+      "startLine": 372
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 373
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 374
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 375
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 376
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 377
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 378
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 379
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 380
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 381
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 382
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 383
+        }
+      ],
+      "required": false,
+      "startLine": 373
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 384
+        }
+      ],
+      "startLine": 384
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 385
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 386
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 387
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 388
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 389
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 390
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 391
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 392
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 393
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 394
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 395
+        }
+      ],
+      "required": false,
+      "startLine": 385
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 396
+        }
+      ],
+      "startLine": 396
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 397
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 398
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 399
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 400
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 401
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 402
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 403
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 404
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 405
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 406
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 407
+        }
+      ],
+      "required": false,
+      "startLine": 397
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 408
+        }
+      ],
+      "startLine": 408
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 409
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 410
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 411
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 412
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 413
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 414
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 415
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 416
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 417
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 418
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 419
+        }
+      ],
+      "required": false,
+      "startLine": 409
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 420
+        }
+      ],
+      "startLine": 420
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 421
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 422
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 423
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 424
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 425
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 426
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 427
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 428
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 429
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 430
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 431
+        }
+      ],
+      "required": false,
+      "startLine": 421
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 432
+        }
+      ],
+      "startLine": 432
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 433
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 434
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 435
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 436
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 437
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 438
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 439
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 440
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 441
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 442
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 443
+        }
+      ],
+      "required": false,
+      "startLine": 433
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 444
+        }
+      ],
+      "startLine": 444
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 445
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 446
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 447
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 448
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 449
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 450
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 451
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 452
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 453
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 454
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 455
+        }
+      ],
+      "required": false,
+      "startLine": 445
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 456
+        }
+      ],
+      "startLine": 456
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 457
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 458
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 459
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 460
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 461
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 462
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 463
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 464
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 465
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 466
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 467
+        }
+      ],
+      "required": false,
+      "startLine": 457
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 468
+        }
+      ],
+      "startLine": 468
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 469
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 470
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 471
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 472
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 473
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 474
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 475
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 476
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 477
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 478
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 479
+        }
+      ],
+      "required": false,
+      "startLine": 469
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 480
+        }
+      ],
+      "startLine": 480
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 481
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 482
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 483
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 484
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 485
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 486
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 487
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 488
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 489
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 490
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 491
+        }
+      ],
+      "required": false,
+      "startLine": 481
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 492
+        }
+      ],
+      "startLine": 492
+    },
+    {
+      "name": "Text and Image",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 493
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 494
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 495
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 496
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": false,
+          "draggingAlt": false,
+          "line": 497
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 498
+        },
+        {
+          "name": "Image Caption",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 499
+        },
+        {
+          "name": "Image position",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 500
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "120",
+          "line": 501
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 502
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "line": 503
+        }
+      ],
+      "required": false,
+      "startLine": 493
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 504
+        }
+      ],
+      "startLine": 504
+    },
+    {
+      "name": "Recommended Articles",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 505
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 506
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 507
+        },
+        {
+          "name": "Description",
+          "type": "Not Empty",
+          "required": false,
+          "draggingAlt": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "140",
+          "line": 508
+        },
+        {
+          "name": "Content card 1",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "line": 509
+        },
+        {
+          "name": "Content card 2",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "line": 510
+        },
+        {
+          "name": "CTA URL",
+          "type": "URL",
+          "required": true,
+          "draggingAlt": false,
+          "line": 511
+        },
+        {
+          "name": "CTA Link text",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 512
+        }
+      ],
+      "startLine": 505
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 513
+        }
+      ],
+      "startLine": 513
+    },
+    {
+      "name": "Link to Hub",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 514
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 515
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": true,
+          "draggingAlt": false,
+          "line": 516
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 517
+        },
+        {
+          "name": "Image Mobile",
+          "type": "Image",
+          "required": true,
+          "draggingAlt": false,
+          "line": 518
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 519
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 520
+        },
+        {
+          "name": "CTA URL",
+          "type": "URL",
+          "required": true,
+          "draggingAlt": false,
+          "line": 521
+        },
+        {
+          "name": "CTA Link text",
+          "type": "Not Empty",
+          "required": true,
+          "draggingAlt": false,
+          "seo": true,
+          "line": 522
+        }
+      ],
+      "startLine": 514
+    }
+  ]
+}
