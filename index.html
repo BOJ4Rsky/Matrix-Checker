@@ -150,7 +150,11 @@ button#runBtn {
     <h1>Inputs</h1>
     <div class="controls inputs-grid">
       <label>Verification rules [JSON]:
-        <input id="jsonFile" type="file" accept=".json" />
+        <select id="jsonFileDropdown">
+          <option value="">— Choose a matrix type —</option>
+          <option value="rules/[Article] 2024.json">[Article] 2024.json</option>
+          <!-- додайте інші файли сюди -->
+        </select>
       </label>
 
       <label>Keyword:
@@ -367,39 +371,43 @@ document.getElementById('excelFile').addEventListener('change', e => {
   reader.readAsArrayBuffer(selectedExcelFile);
 });
 
-document.getElementById('jsonFile').addEventListener('change', e => {
-  showLoader('Loading JSON configuration...');
-  const f = e.target.files[0];
+document.getElementById('jsonFileDropdown').addEventListener('change', e => {
+  const selectedPath = e.target.value; // напряму шлях у репозиторії
   pageJSON = null;
 
   const keywordField = document.getElementById('keywordField');
   keywordField.value = ''; // очистити попереднє значення
-  document.getElementById('jsonName').textContent = f ? f.name : '—';
-  if (!f) return;
 
-  // 🔍 Витягуємо слово в квадратних дужках з імені файлу
-  const match = f.name.match(/\[([^\]]+)\]/);
-  if (match && match[1]) {
-    keywordField.value = match[1];
-  } else {
-    keywordField.value = '(not found)';
+  if(!selectedPath) {
+    document.getElementById('jsonName').textContent = '—';
+    return;
   }
 
-  const fr = new FileReader();
-  fr.onload = ev => {
-    try { 
-      pageJSON = JSON.parse(ev.target.result); 
-    } catch (err) { 
-      pageJSON = null; 
-      alert('Invalid JSON file'); 
-      document.getElementById('jsonName').textContent = '—'; 
-    } finally {
-      hideLoader();
-    }
-    renderSEOCheckboxes();
-  };
-  fr.readAsText(f);
+  // Відображаємо ім'я обраного файлу
+  document.getElementById('jsonName').textContent = selectedPath.split('/').pop();
+
+  // Завантажуємо JSON із GitHub через fetch
+  fetch(selectedPath)
+    .then(resp => resp.ok ? resp.json() : Promise.reject('Failed to load JSON'))
+    .then(data => {
+      pageJSON = data;
+
+      // Витягуємо keyword зі шляху файлу
+      const match = selectedPath.match(/\[([^\]]+)\]/);
+      if (match && match[1]) {
+        keywordField.value = match[1];
+      } else {
+        keywordField.value = '(not found)';
+      }
+
+      renderSEOCheckboxes();
+    })
+    .catch(err => {
+      alert('Error loading JSON: ' + err);
+      document.getElementById('jsonName').textContent = '—';
+    });
 });
+
 
 
 document.getElementById('runBtn').addEventListener('click', () => {
@@ -1075,3 +1083,4 @@ backToTopBtn.addEventListener("click", () => {
 
 </body>
 </html>
+
