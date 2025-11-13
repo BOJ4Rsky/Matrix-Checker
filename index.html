@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Excel Checker — Per-component tables</title>
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+<style>
+:root{
+  --bg:#f4f6f8;
+  --card:#fff;
+  --accent:#0078d4;
+  --accent-dark:#005a9e;
+  --muted:#6b7280;
+  --ok:#d1fae5;
+  --warn:#fef3c7;
+  --err:#fee2e2;
+  --radius:10px;
+}
+body{font-family:"Segoe UI", Roboto, Arial, sans-serif;background:var(--bg);margin:0;padding:20px;color:#222;width: calc(100% - 40px);overflow-y: scroll;}
+.app{max-width:100%;margin:0 auto;padding:10px}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:0 4px 12px rgba(0,0,0,0.05);padding:16px;margin-bottom:16px}
+h1{margin:0 0 12px 0;font-size:20px}
+.controls{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+label{font-size:14px}
+input[type=file], select, input[type=number]{padding:6px;border-radius:6px;border:1px solid #d1d5db;background:white}
+button{background:var(--accent);color:white;border:none;padding:6px 12px;border-radius:6px;cursor:pointer}
+.files-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:6px}
+.file-name{font-weight:600;color:var(--muted)}
+.status-summary{font-weight:700;margin-bottom:6px;font-size:16px}
+.problem-cells{margin-bottom:10px;word-break:break-word;display:block;flex-wrap:wrap;gap:6px}
+.problem-cells span{cursor:pointer;padding:4px 6px;border-radius:4px;font-weight:600;}
+.problem-cells span.error{background:var(--err);color:#7f1d1d;}
+.problem-cells span.warn{background:var(--warn);color:#7c2d12;}
+.component-title{margin-top:18px;margin-bottom:12px;font-weight:700;display:flex;align-items:center;gap:10px}
+table{border-collapse:collapse;margin-bottom:18px;table-layout:fixed;}
+th,td{border:1px solid #d1d5db;padding:6px 8px;text-align:left;vertical-align:top;word-break:break-word;font-size:13px;min-width:260px;width:260px;box-sizing:border-box;}
+th.col-header{text-align:center;background:#f3f4f6;font-weight:700}
+th.field-col{width:240px;background:#f8fafc}
+td.ok{background:var(--ok)}
+td.warn{background:var(--warn)}
+td.error{background:var(--err)}
+.cell-addr{font-weight:700;margin-bottom:4px;display:block;color:#333}
+.empty-cell{color:#6b7280;font-style:italic}
+.component-summary { padding:6px 8px; border-radius:6px; display:inline-block; margin-bottom:8px; font-weight:600; }
+.component-ok { background: var(--ok); color:#064e3b; }
+.component-warn { background: var(--warn); color:#7c2d12; }
+.component-err { background: var(--err); color:#7f1d1d; }
+.highlight{outline:2px solid red;}
+#runBtn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+#runBtn:active {
+  transform: translateY(1px);
+}
+
+/* ===== Loading Overlay ===== */
+#loadingOverlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  flex-direction: column;
+  backdrop-filter: blur(2px);
+}
+.loader {
+  border: 6px solid #e5e7eb;
+  border-top: 6px solid var(--accent);
+  border-radius: 50%;
+  width: 60px; height: 60px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#loadingOverlay span {
+  margin-top: 16px;
+  font-weight: 600;
+  color: var(--accent-dark);
+  font-size: 16px;
+}
+
+.inputs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* дві колонки */
+  gap: 12px 16px; /* відстань між рядками і колонками */
+  align-items: end;
+}
+
+.inputs-grid label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.inputs-grid input,
+.inputs-grid select {
+  width: 100%; /* всі поля однакової ширини */
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: white;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+button#runBtn {
+  flex: 0 0 auto; /* не розтягувати */
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 64px;
+  height: 64px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: none; /* прихована за замовчуванням */
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  z-index: 999;
+}
+#backToTop:hover {
+  background: var(--accent-dark);
+  transform: translateY(-3px);
+}
+
+
+@media (max-width:720px){ th.field-col{width:180px} }
+</style>
+</head>
+<body>
+<div class="app">
+
+<div style="display:flex; gap:16px; flex-wrap:wrap;">
+
+  <!-- Card 1: Inputs -->
+  <div class="card" style="flex:1;min-width:320px">
+    <h1>Inputs</h1>
+    <div class="controls inputs-grid">
+      <label>Verification rules [JSON]:
+        <input id="jsonFile" type="file" accept=".json" />
+      </label>
+
+      <label>Keyword:
+        <input type="text" id="keywordField" readonly />
+      </label>
+
+      <label>Content matrix [EXCEL]:
+        <input id="excelFile" type="file" accept=".xlsx,.xls" />
+      </label>
+
+      <label>Number of Languages:
+        <select id="langCountSelect">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <!-- Card Tabs -->
+  <div class="card" style="flex:1;min-width:320px;">
+    <h1>Tabs to check</h1>
+
+  </div>
+
+  <!-- Card SEO Check -->
+  <div class="card" style="flex:1;min-width:320px;">
+    <h1>SEO Check</h1>
+    <div style="margin-bottom:8px;">
+      Recommended number of words: 
+      <input type="number" id="recommendedWords" value="250" style="width:60px;padding:2px 4px;border-radius:4px;border:1px solid #d1d5db;" />
+    </div>
+    <div id="seoCheckFields" style="display:grid; grid-template-columns:repeat(3,1fr); gap:6px;"></div>
+  </div>
+
+</div>
+
+<div style="display:flex; gap:16px; flex-wrap:wrap;">
+  <div class="card" style="flex:1;min-width:320px; display:flex; justify-content:center; align-items:center;">
+  <button id="runBtn" style="
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    transition: background 0.2s ease, transform 0.1s ease;
+  ">
+    Run Check
+  </button>
+  </div>
+
+  <!-- Card File Status & Summary -->
+  <div class="card" id="fileStatusCard" style="flex:1;min-width:320px">
+    <h1>File Status & Summary</h1>
+    <div class="files-row">
+      <div>Excel: <span id="excelName" class="file-name">—</span></div>
+      <div>JSON: <span id="jsonName" class="file-name">—</span></div>
+    </div>
+    <div id="fileNameStatus"></div>
+    <div id="tabsWithKeyword"></div>
+    <div id="skipStatus"></div>
+    <div id="sheetStatus"></div>
+    <div id="errorSummary" style="display:none;">
+      ❌ <span id="totalErrors">0</span> errors, ⚠️ <span id="totalWarns">0</span> warnings
+    </div>
+    <div id="overallStatus"></div>
+    <div class="problem-cells" id="problemCells"></div>
+  </div>
+
+  <!-- Empty card -->
+  <div class="card" style="flex:1;min-width:320px;">
+  </div>
+
+</div>
+
+
+  <!-- Card Results -->
+  <div class="card">
+    <h1>Results</h1>
+    <div id="outputContainer" style="overflow-x:auto; width:100%;">
+      <div id="output"></div>
+    </div>
+  </div>
+
+<script>
+function colIndexToLetter(index){
+  let letters = '';
+  while(index >= 0){
+    letters = String.fromCharCode((index % 26) + 65) + letters;
+    index = Math.floor(index/26) - 1;
+  }
+  return letters;
+}
+
+let selectedExcelFile = null;
+let pageJSON = null;
+let columnsLetters = [];
+let columnsData = [];
+
+document.getElementById('excelFile').addEventListener('change', e => {
+  showLoader('Reading Excel file...');
+  selectedExcelFile = e.target.files[0] || null;
+  document.getElementById('excelName').textContent = selectedExcelFile ? selectedExcelFile.name : '—';
+
+  // Очистити File Status & Summary
+  document.getElementById('fileNameStatus').textContent = '';
+  document.getElementById('tabsWithKeyword').textContent = '';
+  document.getElementById('skipStatus').textContent = '';
+  document.getElementById('sheetStatus').textContent = '';
+  document.getElementById('errorSummary').style.display = 'none';
+  document.getElementById('totalErrors').textContent = '0';
+  document.getElementById('totalWarns').textContent = '0';
+  document.getElementById('overallStatus').textContent = '';
+  document.getElementById('problemCells').innerHTML = '';
+
+  // Очистити Results
+  document.getElementById('output').innerHTML = '';
+
+  // Знаходимо картку Tabs to check
+  const allCards = document.querySelectorAll('.card');
+  let tabsContainer = null;
+  allCards.forEach(card => {
+    const h1 = card.querySelector('h1');
+    if (h1 && h1.textContent.trim() === 'Tabs to check') {
+      tabsContainer = card;
+    }
+  });
+  if (!tabsContainer) return;
+
+  // очищуємо старий список
+  tabsContainer.querySelectorAll('.tab-checkboxes').forEach(el => el.remove());
+
+  if (!selectedExcelFile) return;
+
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try {
+      const data = new Uint8Array(ev.target.result);
+      const workbook = XLSX.read(data, { type: 'array' });
+      const sheetNames = workbook.SheetNames;
+
+      // --- Отримуємо keyword із поля Keyword (з JSON) ---
+      const keyword = (document.getElementById('keywordField').value || '').trim().toLowerCase();
+
+
+      // --- Створюємо список чекбоксів ---
+      const checkboxesDiv = document.createElement('div');
+      checkboxesDiv.className = 'tab-checkboxes';
+      checkboxesDiv.style.display = 'grid';
+      checkboxesDiv.style.gridTemplateColumns = 'repeat(3, 1fr)'; // три колонки
+      checkboxesDiv.style.gap = '6px 12px'; // 6px між рядками, 12px між колонками
+      checkboxesDiv.style.marginTop = '8px';
+
+      sheetNames.forEach(name => {
+        const label = document.createElement('label');
+        label.style.display = 'flex';
+        label.style.alignItems = 'center';
+        label.style.gap = '6px';
+        label.style.fontSize = '14px';
+
+        const cb = document.createElement('input');
+        cb.type = 'checkbox';
+        cb.value = name;
+
+        // --- Автовибір лише табів, де є keyword ---
+        if (keyword && name.toLowerCase().includes(keyword)) {
+          cb.checked = true;
+        } else {
+          cb.checked = false;
+        }
+
+        label.appendChild(cb);
+        label.appendChild(document.createTextNode(name));
+        checkboxesDiv.appendChild(label);
+      });
+
+      tabsContainer.appendChild(checkboxesDiv);
+      
+      // --- Після створення чекбоксів ---
+      const tabsWithKeyword = sheetNames.filter(name => {
+        return keyword && name.toLowerCase().includes(keyword);
+      });
+
+      const tabsNode = document.getElementById('tabsWithKeyword');
+
+      if(tabsWithKeyword.length === 0){
+        // ❌ Помилка
+        tabsNode.textContent = `❌ Tabs with keyword: None`;
+        tabsNode.style.color = 'red';
+      } else if(tabsWithKeyword.length === 1){
+        // ✅ Добре
+        tabsNode.textContent = `✅ Tabs with keyword: ${tabsWithKeyword[0]}`;
+        tabsNode.style.color = 'green';
+      } else {
+        // ⚠️ Попередження
+        tabsNode.textContent = `⚠️ Tabs with keyword: ${tabsWithKeyword.join(', ')}`;
+        tabsNode.style.color = 'orange';
+      }
+
+
+    } catch (err) {
+      alert('Error reading Excel file: ' + err.message);
+    }
+    finally {
+      hideLoader();
+    }
+  };
+
+  reader.readAsArrayBuffer(selectedExcelFile);
+});
+
+document.getElementById('jsonFile').addEventListener('change', e => {
+  showLoader('Loading JSON configuration...');
+  const f = e.target.files[0];
+  pageJSON = null;
+
+  const keywordField = document.getElementById('keywordField');
+  keywordField.value = ''; // очистити попереднє значення
+  document.getElementById('jsonName').textContent = f ? f.name : '—';
+  if (!f) return;
+
+  // 🔍 Витягуємо слово в квадратних дужках з імені файлу
+  const match = f.name.match(/\[([^\]]+)\]/);
+  if (match && match[1]) {
+    keywordField.value = match[1];
+  } else {
+    keywordField.value = '(not found)';
+  }
+
+  const fr = new FileReader();
+  fr.onload = ev => {
+    try { 
+      pageJSON = JSON.parse(ev.target.result); 
+    } catch (err) { 
+      pageJSON = null; 
+      alert('Invalid JSON file'); 
+      document.getElementById('jsonName').textContent = '—'; 
+    } finally {
+      hideLoader();
+    }
+    renderSEOCheckboxes();
+  };
+  fr.readAsText(f);
+});
+
+
+document.getElementById('runBtn').addEventListener('click', () => {
+  showLoader('Running data analysis...');
+  setTimeout(() => {  // невелика затримка, щоб користувач побачив анімацію
+    runCheck();
+    hideLoader();
+  }, 150);
+});
+
+
+function getLanguageCount(){ return parseInt(document.getElementById('langCountSelect').value)||1; }
+
+function generateColumnsByLanguage(langCount){
+  const cols = [15];
+  if(langCount===1){ while(cols[cols.length-1]<500) cols.push(cols[cols.length-1]+6); }
+  else if(langCount===2){ const pattern=[3,6]; let i=0; while(cols[cols.length-1]<500){ cols.push(cols[cols.length-1]+pattern[i%2]); i++; } }
+  else if(langCount===3){ const pattern=[3,3,6]; let i=0; while(cols[cols.length-1]<500){ cols.push(cols[cols.length-1]+pattern[i%3]); i++; } }
+  return cols;
+}
+
+function showLoader(message = 'Processing...') {
+  const overlay = document.getElementById('loadingOverlay');
+  const text = document.getElementById('loadingText');
+  text.textContent = message;
+  overlay.style.display = 'flex';
+}
+
+function hideLoader() {
+  document.getElementById('loadingOverlay').style.display = 'none';
+}
+
+let allErrors = 0;
+let allWarns = 0;
+
+// --- Run Check ---
+function runCheck(){
+  allErrors = 0;
+  allWarns = 0;
+
+  const typeSel = document.getElementById('keywordField').value;
+  const langCount = getLanguageCount();
+  const out = document.getElementById('output'); out.innerHTML='';
+  document.getElementById('fileNameStatus').textContent='';
+  document.getElementById('skipStatus').textContent='';
+  document.getElementById('sheetStatus').textContent='';
+  document.getElementById('overallStatus').textContent='';
+  document.getElementById('totalErrors').textContent='0';
+  document.getElementById('totalWarns').textContent='0';
+  document.getElementById('problemCells').innerHTML='';
+
+  if(!typeSel){ alert('Select Type'); return; }
+  if(!selectedExcelFile){ alert('Select Excel file'); return; }
+  if(!pageJSON){ alert('Select valid JSON file'); return; }
+
+  const fr = new FileReader();
+  fr.onload = ev=>{
+    const data = new Uint8Array(ev.target.result);
+    const wb = XLSX.read(data,{type:'array'});
+    const keyword = typeSel.toLowerCase();
+
+    // File name check
+    const fileNameOk = selectedExcelFile.name.toLowerCase().includes(keyword);
+    const fnNode = document.getElementById('fileNameStatus');
+    fnNode.style.color=fileNameOk?'green':'red';
+    fnNode.textContent=fileNameOk?'✅ File name contains keyword':'❌ File name does NOT contain keyword';
+
+    // Вибір вкладки за чекбоксом
+    const checkedSheets = Array.from(document.querySelectorAll('.tab-checkboxes input:checked'))
+                              .map(cb => cb.value);
+
+    if (checkedSheets.length === 0) {
+      const sheetNode = document.getElementById('sheetStatus');
+      sheetNode.style.color = 'red';
+      sheetNode.textContent = '❌ No tab selected';
+      return;
+    }
+
+    const output = document.getElementById('output');
+    output.innerHTML = ''; // очищуємо попередній результат
+
+    checkedSheets.forEach(sheetName => {
+      const sheet = wb.Sheets[sheetName];
+      if (!sheet) return;
+
+      // Створюємо спойлер (details)
+      const details = document.createElement('details');
+      details.open = false; // можна зробити false, щоб спойлери були згорнуті
+
+      const summary = document.createElement('summary');
+      summary.textContent = `Checked tab: ${sheetName}`;
+      summary.style.fontWeight = '700';
+      summary.style.fontSize = '16px';
+      summary.style.cursor = 'pointer';
+      summary.style.margin = '12px 0';
+      
+
+      // Контейнер для результатів цієї таби
+      const tabContainer = document.createElement('div');
+      tabContainer.className = 'tab-result';
+      tabContainer.style.marginLeft = '12px';
+
+      // 🔹 Додаємо контейнер для проблемних комірок конкретної таби
+      const tabProblemCells = document.createElement('div');
+      tabProblemCells.className = 'problem-cells';
+      tabProblemCells.style.marginBottom = '10px';
+      tabContainer.appendChild(tabProblemCells);
+
+      details.appendChild(summary);
+
+      const sheetNode = document.getElementById('sheetStatus');
+      sheetNode.style.color = 'green';
+
+      // Columns & SKIP check
+      const colIndices = generateColumnsByLanguage(langCount);
+      columnsLetters = [];
+      columnsData = [];
+      let skippedColumnsCount = 0;
+      let skippedColumnsList = []; // новий масив
+
+      for(let ci=0; ci<colIndices.length; ci++){
+        const colLetter = colIndexToLetter(colIndices[ci]);
+        const skipAddr = `${colLetter}10`;
+        const skipCell = sheet[skipAddr];
+        const skipVal = skipCell ? String(skipCell.v).trim().toUpperCase() : '';
+        if(skipVal==='SKIP'){
+          skippedColumnsCount++;
+          skippedColumnsList.push(colLetter); // додаємо до списку
+          continue;
+        }
+
+        let anyNonEmpty=false;
+        const colCells=[];
+        pageJSON.components.forEach(comp=>{
+          comp.rows.forEach(r=>{
+            const addr = `${colLetter}${r.line}`;
+            const cell = sheet[addr]; 
+            const val = cell?String(cell.v).trim():'';
+            colCells.push({addr,val,rowDef:r,compName:comp.name}); 
+            if(val!=='') anyNonEmpty=true;
+          });
+        });
+        if(!anyNonEmpty) break;
+        columnsLetters.push(colLetter);
+        columnsData.push(colCells);
+      }
+
+      // Per-component check
+      const problemCellsArr = [];
+      const componentSummary = pageJSON.components.map(_ => ({errors:0,warns:0}));
+      const perComponentCells = pageJSON.components.map(comp => comp.rows.map(r => ({rowDef:r,cells:[]})));
+
+    columnsData.forEach(colCells => {
+        let pointer = 0;
+        pageJSON.components.forEach((comp, cIdx) => {
+          const isComponentOptional = (comp.type && comp.type.toLowerCase() === 'optional');
+          comp.rows.forEach((r, rIdx) => {
+            const item = colCells[pointer++];
+            let val = item.val ? item.val.trim() : '';
+            let status = 'ok';
+            let errorType = null;
+            let bgColor = null;
+
+            if (r.color) {
+              status = 'ok';
+              bgColor = r.color;
+            } else {
+              const valLength = val.length;
+
+              // --- Якщо компонент Optional, ігноруємо помилки довжини ---
+              if (isComponentOptional) {
+                // Якщо поле порожнє — це не помилка, бо компонент optional
+                // Якщо заповнене — просто перевіримо на валідність типу (наприклад URL, Image)
+                switch ((r.type || '').toString()) {
+                  case 'Image':
+                    if (!r.required && val === '') { 
+                      status = 'warn'; 
+                    } else if (val && /^(\d+(?:\s*,\s*\d+)*)$|.*\.(jpg|jpeg|png|svg)$/i.test(val)) {
+                      status = 'ok';
+                    } else {
+                      status = 'error';
+                      errorType = 'invalidImage'; // 🔹 додано
+                    }
+                    break;
+
+                  case 'URL':
+                    if (val && (/^(http|https):\/\//.test(val))) {
+                        // Перевірка на пробіли
+                        if (/\s/.test(val)) {
+                            status = 'error';
+                            errorType = 'spaceInURL';
+                        } else {
+                            // Перевірка останньої частини URL та символів після домену
+                            const urlObj = new URL(val);
+                            const path = urlObj.pathname; // тільки частина після домену
+                            if (/[^a-zA-Z0-9\-\/_]/.test(path)) {
+                                status = 'error';
+                                errorType = 'invalidCharInURL';
+                            } else if (path.split('/').filter(Boolean).pop().length > 40) {
+                                status = 'error';
+                                errorType = 'tooLongURL';
+                            } else {
+                                status = 'ok';
+                            }
+                        }
+                    } else if (val === '' && !r.required) {
+                        status = 'ok'; // порожній, але необов’язковий
+                    } else {
+                        status = 'error';
+                        errorType = 'invalidURL';
+                    }
+                  break;
+
+                  case 'YES/NO': {
+                    const cell = XLSX.utils.decode_cell(item.addr);
+                    const nextCellAddr = XLSX.utils.encode_cell({ c: cell.c + 1, r: cell.r });
+                    const nextCell = sheet[nextCellAddr];
+                    const nextCellVal = nextCell && nextCell.v ? String(nextCell.v).trim().toUpperCase() : '';
+                    if (val === '' && nextCellVal === 'YES') { status = 'error'; errorType = 'empty'; }
+                    else if (val !== '' && nextCellVal === 'YES') { status = 'ok'; }
+                    else { status = 'warn'; }
+                    break;
+                  }
+                  default:
+                    status = 'ok'; // ігноруємо інші довжини
+                }
+              } 
+              // --- Якщо компонент не Optional, працює стандартна логіка ---
+              else {
+                switch ((r.type || '').toString()) {
+                  case 'Not Empty':
+                      if (!r.required && val === '') {
+                          status = 'ok';
+                      } else if (r.required && val === '') {
+                          status = 'error';
+                          errorType = 'empty';
+                      } else if (r.minLength !== undefined && valLength < r.minLength) {
+                          status = 'error';
+                          errorType = 'tooShort';
+                      } else if (r.maxLength !== undefined && valLength > r.maxLength) {
+                          status = 'error';
+                          errorType = 'tooLong';
+                      }
+                      break;
+
+                  case 'Optional':
+                      if (val === '') {
+                          status = 'ok'; // пусте необов’язкове поле не рахуємо
+                      } else if (r.minLength !== undefined && valLength < r.minLength) { 
+                          status = 'error'; 
+                          errorType = 'tooShort'; 
+                      } else if (r.maxLength !== undefined && valLength > r.maxLength) { 
+                          status = 'error'; 
+                          errorType = 'tooLong'; 
+                      }
+                      break;
+                  case 'Image':
+                    if (!r.required && val === '') { 
+                        status = 'warn'; 
+                      } else if (val && /^(\d+(?:\s*,\s*\d+)*)$|.*\.(jpg|jpeg|png|svg)$/i.test(val)) {
+                        status = 'ok';
+                      } else {
+                        status = 'error';
+                        errorType = 'invalidImage'; // 🔹 додано
+                      }
+                      break;
+
+                  case 'YES/NO': {
+                    const cell = XLSX.utils.decode_cell(item.addr);
+                    const nextCellAddr = XLSX.utils.encode_cell({ c: cell.c + 1, r: cell.r });
+                    const nextCell = sheet[nextCellAddr];
+                    const nextCellVal = nextCell && nextCell.v ? String(nextCell.v).trim().toUpperCase() : '';
+                    if (val === '' && nextCellVal === 'YES') { status = 'error'; errorType = 'empty'; }
+                    else if (val !== '' && nextCellVal === 'YES') { status = 'ok'; }
+                    else { status = 'warn'; }
+                    break;
+                  }
+
+                  case 'URL':
+                    if (val && (/^(http|https):\/\//.test(val))) {
+                        // Перевірка на пробіли
+                        if (/\s/.test(val)) {
+                            status = 'error';
+                            errorType = 'spaceInURL';
+                        } else {
+                            // Перевірка останньої частини URL та символів після домену
+                            const urlObj = new URL(val);
+                            const path = urlObj.pathname; // тільки частина після домену
+                            if (/[^a-zA-Z0-9\-\/_]/.test(path)) {
+                                status = 'error';
+                                errorType = 'invalidCharInURL';
+                            } else if (path.split('/').filter(Boolean).pop().length > 40) {
+                                status = 'error';
+                                errorType = 'tooLongURL';
+                            } else {
+                                status = 'ok';
+                            }
+                        }
+                    } else if (val === '' && !r.required) {
+                        status = 'ok'; // порожній, але необов’язковий
+                    } else {
+                        status = 'error';
+                        errorType = 'invalidURL';
+                    }
+                  break;
+
+                  default:
+                      if (r.required && val === '') {
+                          status = 'error';
+                          errorType = 'empty';
+                      } 
+                      else if (!r.required && val === '') {
+                          // поле не є обов’язковим і порожнє — це ОК, навіть якщо є ліміти
+                          status = 'ok';
+                      }
+                      else {
+                          // якщо є довжина — перевіряємо лише для непорожніх
+                          if (r.minLength !== undefined && valLength < r.minLength) {
+                          status = 'error';
+                          errorType = 'tooShort';
+                          } else if (r.maxLength !== undefined && valLength > r.maxLength) {
+                          status = 'error';
+                          errorType = 'tooLong';
+                          } else {
+                          status = 'ok';
+                          }
+                      }
+                      break;
+                }
+              }
+            }
+
+            perComponentCells[cIdx][rIdx].cells.push({ addr: item.addr, val: item.val, status, bgColor, errorType });
+            if (status === 'error') { problemCellsArr.push({ addr: item.addr, status, errorType }); componentSummary[cIdx].errors++; }
+            else if (status === 'warn') { componentSummary[cIdx].warns++; }
+          });
+        });
+      });
+
+
+
+      // Overall summary
+      const totalErrors = componentSummary.reduce((s,c)=>s+c.errors,0);
+      const totalWarns = componentSummary.reduce((s,c)=>s+c.warns,0);
+
+      allErrors += totalErrors;
+      allWarns += totalWarns;
+
+      // Оновлюємо summary спойлера
+      if (columnsLetters.length === 0) {
+        summary.innerHTML = `Checked tab: ${sheetName} — <span style="color:red;">The sheet does not match the structure of the ${keyword}!</span>`;
+      } else {
+    summary.textContent = `Checked tab: ${sheetName} — ❌ ${totalErrors} errors, ⚠️ ${totalWarns} warnings` +
+        (skippedColumnsCount>0 ? `, ⏭️ ${skippedColumnsCount} skipped columns: ${skippedColumnsList.join(', ')}` : '');
+}
+
+      document.getElementById('totalErrors').textContent = allErrors;
+      document.getElementById('totalWarns').textContent = allWarns;
+      document.getElementById('errorSummary').style.display = 'block';
+
+      // --- Overall summary ---
+      const overallNode = document.getElementById('overallStatus');
+      overallStatus.style.fontWeight = '700';
+
+      let reasons = [];
+
+      if (!fileNameOk) reasons.push('File name does not contain keyword');
+      if (tabsWithKeyword.length === 0) reasons.push('No tabs with keyword found');
+      if (allErrors > 0) reasons.push(`${allErrors} unresolved error(s)`);
+
+      if (reasons.length > 0) {
+          overallNode.textContent = `❌ File NOT ready for automation: ${reasons.join('; ')}`;
+          overallNode.style.color = 'red';
+      } else if (allWarns > 0) {
+          overallNode.textContent = `⚠️ File ready but with warnings (${allWarns})`;
+          overallNode.style.color = 'orange';
+      } else {
+          overallNode.textContent = '✅ File ready for automation';
+          overallNode.style.color = 'green';
+      }
+
+
+      // Problem cells
+      const categories = { 
+        empty: 'Empty field', 
+        tooShort: 'Too short', 
+        tooLong: 'Too long',
+        invalidImage: 'Image issue',
+        invalidURL: 'Invalid URL',
+        tooLongURL: 'Too long URL',
+        spaceInURL: 'Space inside URL',
+        invalidCharInURL: 'Invalid character inside URL'
+      };
+
+      for(const [key,label] of Object.entries(categories)){
+        const filtered = problemCellsArr.filter(pc => pc.errorType === key);
+        if(filtered.length > 0){
+          const catDiv = document.createElement('div');
+          catDiv.style.display = 'block';
+          catDiv.style.margin = '12px';
+          catDiv.style.lineHeight = '2';
+
+          const labelNode = document.createElement('strong');
+          labelNode.textContent = label + ':';
+          catDiv.appendChild(labelNode);
+
+          const anchorsDiv = document.createElement('div');
+          anchorsDiv.style.marginTop = '6px';
+
+          filtered.forEach(pc => {
+            const span = document.createElement('span'); 
+            span.textContent = pc.addr; 
+            span.className='error';
+            span.style.margin = '6px';
+            span.style.display = 'inline-block';
+            span.onclick = ()=>{ 
+              // шукаємо тільки в межах поточного tabContainer
+              const el = tabContainer.querySelector(`[data-addr="${pc.addr}"]`); 
+              if(el){ 
+                el.scrollIntoView({behavior:'smooth',block:'center'}); 
+                el.classList.add('highlight'); 
+                setTimeout(()=>el.classList.remove('highlight'),1500);
+              } 
+            };
+            anchorsDiv.appendChild(span);
+          });
+
+          catDiv.appendChild(anchorsDiv);
+          tabProblemCells.appendChild(catDiv);  // 🔹 Вставка в контейнер конкретної таби
+        }
+      }
+
+      // Tables per component
+      pageJSON.components.forEach((comp,cIdx)=>{
+      const titleRow = document.createElement('div'); titleRow.className='component-title';
+      titleRow.textContent=comp.name+' ';
+      const pill = document.createElement('span'); pill.className='component-summary';
+      if(componentSummary[cIdx].errors>0){ pill.classList.add('component-err'); pill.textContent=`${componentSummary[cIdx].errors} error(s)`; }
+      else if(componentSummary[cIdx].warns>0){ pill.classList.add('component-warn'); pill.textContent=`${componentSummary[cIdx].warns} warning(s)`; }
+      else{ pill.classList.add('component-ok'); pill.textContent='OK'; }
+      titleRow.appendChild(pill); 
+      tabContainer.appendChild(titleRow);
+
+      const table = document.createElement('table');
+      const htr=document.createElement('tr');
+      const thField=document.createElement('th'); thField.className='field-col'; thField.textContent='Field'; htr.appendChild(thField);
+      columnsLetters.forEach(colLetter=>{ const th=document.createElement('th'); th.className='col-header'; th.textContent=colLetter; htr.appendChild(th); });
+      table.appendChild(htr);
+
+      comp.rows.forEach((r,rIdx)=>{
+        const tr=document.createElement('tr');
+        const th = document.createElement('th'); 
+        let fieldText = r.name;
+        const min = r.minLength, max = r.maxLength;
+        if(min !== undefined || max !== undefined){
+            fieldText += ` (${min || ''}-${max || ''})`;
+        }
+        th.textContent = fieldText;
+        th.style.fontWeight = 600;
+        th.style.background = '#fafafa';
+        tr.appendChild(th);
+
+        const cells = perComponentCells[cIdx][rIdx].cells;
+        for(let colI=0; colI<columnsLetters.length; colI++){
+          const td=document.createElement('td'); const cd=cells[colI];
+          if(cd){
+            td.setAttribute('data-addr', cd.addr);
+            const addrNode=document.createElement('span'); addrNode.className='cell-addr'; addrNode.textContent=cd.addr; td.appendChild(addrNode);
+            const valNode=document.createElement('div'); valNode.textContent=cd.val===''?'(empty)':cd.val; if(cd.val==='') valNode.className='empty-cell'; td.appendChild(valNode);
+            td.className=cd.status;
+            if(cd.bgColor){ td.style.background=cd.bgColor; td.style.color='#000'; }
+          }
+          tr.appendChild(td);
+        }
+        table.appendChild(tr);
+      });
+      tabContainer.appendChild(table);
+    });
+
+  // 🔹 Зберігаємо копії даних колонок для цього таба
+  tabContainer.dataset.columnsLetters = JSON.stringify(columnsLetters);
+  tabContainer.dataset.columnsData = JSON.stringify(columnsData);
+
+  details.appendChild(tabContainer);
+  output.appendChild(details);
+});
+
+    // Автоматичний SEO Check після Run Check
+    //runSEOUpdateAfterCheck();
+
+    // Для кожного checked tab
+    const tabContainers = output.querySelectorAll('.tab-result');
+    tabContainers.forEach(tc => {
+      updateSEOCheck(tc);
+    });
+
+  };
+  fr.readAsArrayBuffer(selectedExcelFile);
+
+}
+
+// --- SEO Functions ---
+function getUniqueFields(){
+  const fieldsSet = new Set();
+  if(!pageJSON) return [];
+  pageJSON.components.forEach(comp=>{
+    comp.rows.forEach(r=>{
+      if(r.name) fieldsSet.add(r.name);
+    });
+  });
+  return Array.from(fieldsSet).sort();
+}
+
+function renderSEOCheckboxes(){
+  const container = document.getElementById('seoCheckFields');
+  container.innerHTML='';
+  if(!pageJSON) return;
+  const fields = getUniqueFields();
+  fields.forEach(f=>{
+    const label = document.createElement('label');
+    label.style.display = 'block';
+    const cb = document.createElement('input'); 
+    cb.type='checkbox'; 
+    cb.value=f; 
+
+    // Автовибір лише якщо seo:true
+    const hasSeo = pageJSON.components.some(comp=>{
+      return comp.rows.some(r => r.name === f && r.seo === true);
+    });
+    cb.checked = hasSeo;
+
+    label.appendChild(cb);
+    label.appendChild(document.createTextNode(' '+f));
+    container.appendChild(label);
+  });
+}
+
+// --- SEO Update ---
+function updateSEOCheck(tabContainer) {
+  const columnsLetters = JSON.parse(tabContainer.dataset.columnsLetters || "[]");
+  const columnsData = JSON.parse(tabContainer.dataset.columnsData || "[]");
+  if (columnsData.length === 0) return;
+
+  const recommended = parseInt(document.getElementById('recommendedWords').value) || 250;
+  const checkedFields = Array.from(document.querySelectorAll('#seoCheckFields input:checked')).map(cb => cb.value);
+  if (checkedFields.length === 0) return;
+
+  // 🔹 Знаходимо першу таблицю компонентів у цьому табі
+  const firstComponentTable = tabContainer.querySelector('table');
+  if (!firstComponentTable) return;
+
+  // 🔹 Беремо колонки тільки з цієї таблиці
+  const colLetters = Array.from(firstComponentTable.querySelectorAll('th.col-header'))
+    .map(th => th.textContent)
+    .filter(col => columnsLetters.includes(col));
+
+  // 🔹 Рахуємо кількість слів лише для цих колонок
+  const wordCounts = colLetters.map(col => {
+    let count = 0;
+    const colDataIdx = columnsLetters.indexOf(col);
+    if (colDataIdx === -1) return 0;
+
+    columnsData[colDataIdx].forEach(cell => {
+      if (cell.rowDef && checkedFields.includes(cell.rowDef.name)) {
+        if (cell.val && cell.val.trim() !== '') {
+          count += cell.val.trim().split(/\s+/).length;
+        }
+      }
+    });
+    return count;
+  });
+
+  // 🔹 Видаляємо старі SEO блоки (якщо вже є)
+  tabContainer.querySelectorAll('.seo-wordcount-table, .seo-title').forEach(el => el.remove());
+
+  // --- SEO Summary ---
+  const seoTitle = document.createElement('div');
+  seoTitle.className = 'component-title seo-title';
+  seoTitle.textContent = 'SEO Check ';
+  const pill = document.createElement('span');
+  pill.className = 'component-summary';
+  const allOk = wordCounts.every(wc => wc >= recommended);
+  pill.textContent = allOk ? 'OK' : 'Not OK';
+  pill.classList.add(allOk ? 'component-ok' : 'component-err');
+  seoTitle.appendChild(pill);
+  tabContainer.prepend(seoTitle);
+
+  // --- SEO Table ---
+  const table = document.createElement('table');
+  table.classList.add('seo-wordcount-table');
+
+  const htr = document.createElement('tr');
+  const thEmpty = document.createElement('th');
+  thEmpty.className = 'field-col';
+  thEmpty.textContent = 'Word Count';
+  htr.appendChild(thEmpty);
+  colLetters.forEach(col => {
+    const th = document.createElement('th');
+    th.className = 'col-header';
+    th.textContent = col;
+    htr.appendChild(th);
+  });
+  table.appendChild(htr);
+
+  const tr = document.createElement('tr');
+  const tdLabel = document.createElement('td');
+  tdLabel.textContent = 'Total words (checked fields)';
+  tr.appendChild(tdLabel);
+
+  wordCounts.forEach(wc => {
+    const td = document.createElement('td');
+    td.textContent = wc;
+    if (wc >= recommended) {
+      td.style.background = 'var(--ok)';
+      td.style.color = '#064e3b';
+    } else {
+      td.style.background = 'var(--err)';
+      td.style.color = '#7f1d1d';
+    }
+    tr.appendChild(td);
+  });
+  table.appendChild(tr);
+
+  seoTitle.insertAdjacentElement('afterend', table);
+
+  // 🔹 Вставляємо після блока з проблемними комірками
+  const problemCellsDiv = tabContainer.querySelector('.problem-cells');
+  if (problemCellsDiv) {
+      problemCellsDiv.insertAdjacentElement('afterend', seoTitle);
+      seoTitle.insertAdjacentElement('afterend', table);
+  } else {
+      // Якщо проблемних комірок немає, просто вставити на початок
+      tabContainer.prepend(seoTitle);
+      seoTitle.insertAdjacentElement('afterend', table);
+  }
+
+}
+
+
+function runSEOUpdateAfterCheck() {
+  renderSEOCheckboxes();
+  updateSEOCheck();
+  document.querySelectorAll('#seoCheckFields input').forEach(cb=>{
+    cb.addEventListener('change', updateSEOCheck);
+  });
+}
+
+</script>
+
+<div id="loadingOverlay">
+  <div class="loader"></div>
+  <span id="loadingText">Processing...</span>
+</div>
+
+<button id="backToTop" title="Back to top">⬆️ Top</button>
+
+<script>
+const backToTopBtn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (document.documentElement.scrollTop > 400) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+});
+
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
+
+
+</body>
+</html>
