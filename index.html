@@ -411,10 +411,25 @@ document.getElementById('jsonFileDropdown').addEventListener('change', e => {
 
 
 document.getElementById('runBtn').addEventListener('click', () => {
+  const btn = document.getElementById('runBtn');
+
+  // 🔹 Блокуємо кнопку та міняємо текст
+  btn.disabled = true;
+  btn.textContent = "Check in progress...";
+  btn.style.background = "#9ca3af";   // сірий
+  btn.style.cursor = "not-allowed";
+
   showLoader('Running data analysis...');
-  setTimeout(() => {  // невелика затримка, щоб користувач побачив анімацію
+
+  setTimeout(() => {
     runCheck();
     hideLoader();
+
+    // 🔹 Повертаємо назад кнопку
+    btn.disabled = false;
+    btn.textContent = "Run Check";
+    btn.style.background = "var(--accent)";
+    btn.style.cursor = "pointer";
   }, 150);
 });
 
@@ -1083,4 +1098,5 @@ backToTopBtn.addEventListener("click", () => {
 
 </body>
 </html>
+
 
