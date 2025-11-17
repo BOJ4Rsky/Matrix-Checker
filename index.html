@@ -177,7 +177,8 @@ table th.field-col {
       <label>Verification rules [JSON]:
         <select id="jsonFileDropdown">
           <option value="">— Choose a matrix type —</option>
-          <option value="rules/[Article] 2024.json">[Article] 2024.json</option>
+          <option value="rules/[Article] 2024.json">[Article] 2024</option>
+          <option value="rules/[Product] 2024.json">[Product] 2024</option>
           <!-- додайте інші файли сюди -->
         </select>
       </label>
@@ -209,11 +210,22 @@ table th.field-col {
   <!-- Card SEO Check -->
   <div class="card" style="flex:1;min-width:320px;">
     <h1>SEO Check</h1>
-    <div style="margin-bottom:8px;">
-      Recommended number of words: 
-      <input type="number" id="recommendedWords" value="250" style="width:60px;padding:2px 4px;border-radius:4px;border:1px solid #d1d5db;" />
-    </div>
-    <div id="seoCheckFields" style="display:grid; grid-template-columns:repeat(3,1fr); gap:6px;"></div>
+
+      <div style="margin-bottom:8px;">
+        Recommended number of words:
+        <input type="number" id="recommendedWords" value="250"
+              style="width:60px;padding:2px 4px;border-radius:4px;border:1px solid #d1d5db;" />
+      </div>
+
+      <details>
+        <summary style="cursor:pointer; font-weight:600; margin-bottom:8px;">
+          SEO fields
+        </summary>
+
+        <div id="seoCheckFields"
+            style="display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-top:8px;">
+        </div>
+      </details>
   </div>
 
 </div>
@@ -1124,6 +1136,7 @@ backToTopBtn.addEventListener("click", () => {
 
 </body>
 </html>
+
 
 
 
