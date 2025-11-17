@@ -1,0 +1,2151 @@
+{
+  "pageName": "Product 2024",
+  "startOffset": 9,
+  "interOffset": 0,
+  "components": [
+    {
+      "name": "SEO",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "color": "#FFA500",
+          "line": 9
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "color": "#808080",
+          "line": 10
+        },
+        {
+          "name": "CMS Title",
+          "type": "Not Empty",
+          "required": true,
+          "minLength": "1",
+          "maxLength": "50",
+          "line": 11
+        },
+        {
+          "name": "Meta Title",
+          "type": "Not Empty",
+          "required": true,
+          "minLength": "40",
+          "maxLength": "70",
+          "line": 12
+        },
+        {
+          "name": "Meta description",
+          "type": "Not Empty",
+          "required": true,
+          "minLength": "100",
+          "maxLength": "170",
+          "line": 13
+        },
+        {
+          "name": "URL alias",
+          "type": "URL",
+          "required": true,
+          "line": 14
+        },
+        {
+          "name": "Keywords",
+          "type": "Not Empty",
+          "required": false,
+          "line": 15
+        },
+        {
+          "name": "Content Reference ID",
+          "type": "Not Empty",
+          "required": true,
+          "line": 16
+        }
+      ],
+      "startLine": 9
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 17
+        }
+      ],
+      "startLine": 17
+    },
+    {
+      "name": "Product Tags",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 18
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 19
+        },
+        {
+          "name": "Product Range 1",
+          "type": "YES/NO",
+          "required": false,
+          "line": 20
+        },
+        {
+          "name": "Product Range 2",
+          "type": "YES/NO",
+          "required": false,
+          "line": 21
+        },
+        {
+          "name": "Product Range 3",
+          "type": "YES/NO",
+          "required": false,
+          "line": 22
+        },
+        {
+          "name": "Product Range 4",
+          "type": "YES/NO",
+          "required": false,
+          "line": 23
+        },
+        {
+          "name": "Product Range 5",
+          "type": "YES/NO",
+          "required": false,
+          "line": 24
+        },
+        {
+          "name": "Product Range 6",
+          "type": "YES/NO",
+          "required": false,
+          "line": 25
+        },
+        {
+          "name": "Product Range 7",
+          "type": "YES/NO",
+          "required": false,
+          "line": 26
+        },
+        {
+          "name": "Product Range 8",
+          "type": "YES/NO",
+          "required": false,
+          "line": 27
+        },
+        {
+          "name": "Product Range 9",
+          "type": "YES/NO",
+          "required": false,
+          "line": 28
+        },
+        {
+          "name": "Product Range 10",
+          "type": "YES/NO",
+          "required": false,
+          "line": 29
+        },
+        {
+          "name": "Product Range 11",
+          "type": "YES/NO",
+          "required": false,
+          "line": 30
+        },
+        {
+          "name": "Product Range 12",
+          "type": "YES/NO",
+          "required": false,
+          "line": 31
+        },
+        {
+          "name": "Product Feature",
+          "type": "Not Empty",
+          "required": false,
+          "line": 32
+        },
+        {
+          "name": "Drink types 1",
+          "type": "YES/NO",
+          "required": false,
+          "line": 33
+        },
+        {
+          "name": "Drink types 2",
+          "type": "YES/NO",
+          "required": false,
+          "line": 34
+        },
+        {
+          "name": "Drink types 3",
+          "type": "YES/NO",
+          "required": false,
+          "line": 35
+        },
+        {
+          "name": "Drink types 4",
+          "type": "YES/NO",
+          "required": false,
+          "line": 36
+        },
+        {
+          "name": "Drink types 5",
+          "type": "YES/NO",
+          "required": false,
+          "line": 37
+        },
+        {
+          "name": "Drink types 6",
+          "type": "YES/NO",
+          "required": false,
+          "line": 38
+        },
+        {
+          "name": "Drink types 7",
+          "type": "YES/NO",
+          "required": false,
+          "line": 39
+        },
+        {
+          "name": "Drink types 8",
+          "type": "YES/NO",
+          "required": false,
+          "line": 40
+        },
+        {
+          "name": "Drink types 9",
+          "type": "YES/NO",
+          "required": false,
+          "line": 41
+        },
+        {
+          "name": "Drink types 10",
+          "type": "YES/NO",
+          "required": false,
+          "line": 42
+        },
+        {
+          "name": "Drink types 11",
+          "type": "YES/NO",
+          "required": false,
+          "line": 43
+        },
+        {
+          "name": "Drink types 12",
+          "type": "YES/NO",
+          "required": false,
+          "line": 44
+        },
+        {
+          "name": "Product Format",
+          "type": "Not Empty",
+          "required": true,
+          "line": 45
+        },
+        {
+          "name": "Coffee Equipment",
+          "type": "Not Empty",
+          "required": true,
+          "line": 46
+        }
+      ],
+      "startLine": 18
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 47
+        }
+      ],
+      "startLine": 47
+    },
+    {
+      "name": "Product Hero Banner",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 48
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 49
+        },
+        {
+          "name": "GTIN",
+          "type": "Not Empty",
+          "required": true,
+          "line": 50
+        },
+        {
+          "name": "Product brand 1",
+          "type": "Not Empty",
+          "required": false,
+          "minLength": "1",
+          "maxLength": "35",
+          "seo": true,
+          "line": 51
+        },
+        {
+          "name": "Product brand 2",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "35",
+          "line": 52
+        },
+        {
+          "name": "Description",
+          "type": "Not Empty",
+          "required": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "seo": true,
+          "line": 53
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "line": 54
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": true,
+          "line": 55
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "seo": true,
+          "line": 56
+        },
+        {
+          "name": "Product Accent Color",
+          "type": "Not Empty",
+          "required": true,
+          "line": 57
+        },
+        {
+          "name": "Packaging Type 1 Icon",
+          "type": "Not Empty",
+          "required": true,
+          "line": 58
+        },
+        {
+          "name": "Packaging Type 1 Label",
+          "type": "Not Empty",
+          "required": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "seo": true,
+          "line": 59
+        },
+        {
+          "name": "Packaging Type 1 Available Options",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "line": 60
+        },
+        {
+          "name": "Packaging Type 2 Icon",
+          "type": "Not Empty",
+          "required": false,
+          "line": 61
+        },
+        {
+          "name": "Packaging Type 2 Label",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 62
+        },
+        {
+          "name": "Packaging Type 2 Available Options",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 63
+        }
+      ],
+      "startLine": 48
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 64
+        }
+      ],
+      "startLine": 64
+    },
+    {
+      "name": "Buy Now",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 65
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 66
+        },
+        {
+          "name": "Label",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 67
+        },
+        {
+          "name": "Buy Now vendor",
+          "type": "Not Empty",
+          "required": false,
+          "line": 68
+        },
+        {
+          "name": "ID for the Buy Now button",
+          "type": "Not Empty",
+          "required": false,
+          "line": 69
+        }
+      ],
+      "required": false,
+      "startLine": 65
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 70
+        }
+      ],
+      "startLine": 70
+    },
+    {
+      "name": "Product attributes",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 71
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 72
+        },
+        {
+          "name": "Product Image",
+          "type": "Image",
+          "required": true,
+          "line": 73
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "seo": true,
+          "line": 74
+        },
+        {
+          "name": "Brewing Label",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "50",
+          "line": 75
+        },
+        {
+          "name": "Brewing icon",
+          "type": "Image",
+          "required": true,
+          "line": 76
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "seo": true,
+          "line": 77
+        },
+        {
+          "name": "Brewing",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "50",
+          "line": 78
+        },
+        {
+          "name": "Tasting notes label",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "50",
+          "line": 79
+        },
+        {
+          "name": "Tasting Notes",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "50",
+          "line": 80
+        },
+        {
+          "name": "Intensity Label",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "50",
+          "line": 81
+        },
+        {
+          "name": "Intensity",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "50",
+          "line": 82
+        },
+        {
+          "name": "Cup size label",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "50",
+          "line": 83
+        },
+        {
+          "name": "Cup Size Icon",
+          "type": "Image",
+          "required": false,
+          "line": 84
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 85
+        },
+        {
+          "name": "Cup Size Value",
+          "type": "Not Empty",
+          "required": false,
+          "minLength": "1",
+          "maxLength": "50",
+          "seo": true,
+          "line": 86
+        },
+        {
+          "name": "Cup Size Quantity",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "50",
+          "line": 87
+        }
+      ],
+      "startLine": 71
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 88
+        }
+      ],
+      "startLine": 88
+    },
+    {
+      "name": "Related Product",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 89
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 90
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "45",
+          "line": 91
+        },
+        {
+          "name": "Image 1",
+          "type": "Image",
+          "required": true,
+          "line": 92
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "seo": true,
+          "line": 93
+        },
+        {
+          "name": "Icon 1",
+          "type": "Image",
+          "required": false,
+          "line": 94
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 95
+        },
+        {
+          "name": "Tile 1 Title",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 96
+        },
+        {
+          "name": "CTA 1 URL",
+          "type": "URL",
+          "required": true,
+          "line": 97
+        },
+        {
+          "name": "CTA 1 Link text",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 98
+        },
+        {
+          "name": "Image 2",
+          "type": "Image",
+          "required": false,
+          "line": 99
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 100
+        },
+        {
+          "name": "Icon 2",
+          "type": "Image",
+          "required": false,
+          "line": 101
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 102
+        },
+        {
+          "name": "Tile 2 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 103
+        },
+        {
+          "name": "CTA 2 URL",
+          "type": "URL",
+          "required": false,
+          "line": 104
+        },
+        {
+          "name": "CTA 2 Link text",
+          "type": "Not Empty",
+          "required": false,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 105
+        },
+        {
+          "name": "Image 3",
+          "type": "Image",
+          "required": false,
+          "line": 106
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 107
+        },
+        {
+          "name": "Icon 3",
+          "type": "Image",
+          "required": false,
+          "line": 108
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 109
+        },
+        {
+          "name": "Tile 3 Title",
+          "type": "Not Empty",
+          "required": false,
+          "line": 110
+        },
+        {
+          "name": "CTA 3 URL",
+          "type": "URL",
+          "required": false,
+          "line": 111
+        },
+        {
+          "name": "CTA 3 Link text",
+          "type": "Not Empty",
+          "required": false,
+          "line": 112
+        }
+      ],
+      "startLine": 89
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 113
+        }
+      ],
+      "startLine": 113
+    },
+    {
+      "name": "Product Story",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 114
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 115
+        },
+        {
+          "name": "Background Pattern",
+          "type": "Not Empty",
+          "required": true,
+          "line": 116
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": true,
+          "line": 117
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "seo": true,
+          "line": 118
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "45",
+          "line": 119
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 120
+        },
+        {
+          "name": "Read more label",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "25",
+          "line": 121
+        },
+        {
+          "name": "Read more content",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "600",
+          "line": 122
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "line": 123
+        },
+        {
+          "name": "Read less label",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "25",
+          "line": 124
+        }
+      ],
+      "startLine": 114
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 125
+        }
+      ],
+      "startLine": 125
+    },
+    {
+      "name": "Coffee Facts",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 126
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 127
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "45",
+          "line": 128
+        },
+        {
+          "name": "Image 1",
+          "type": "Image",
+          "required": true,
+          "line": 129
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "seo": true,
+          "line": 130
+        },
+        {
+          "name": "Tile 1 Body",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 131
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "line": 132
+        },
+        {
+          "name": "Image 2",
+          "type": "Image",
+          "required": false,
+          "line": 133
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 134
+        },
+        {
+          "name": "Tile 2 Body",
+          "type": "Not Empty",
+          "required": false,
+          "minLength": "1",
+          "maxLength": "100",
+          "seo": true,
+          "line": 135
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "line": 136
+        },
+        {
+          "name": "Image 3",
+          "type": "Image",
+          "required": false,
+          "line": 137
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 138
+        },
+        {
+          "name": "Tile 3 Body",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 139
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "line": 140
+        }
+      ],
+      "startLine": 126
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 141
+        }
+      ],
+      "startLine": 141
+    },
+    {
+      "name": "Sustainability",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 142
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 143
+        },
+        {
+          "name": "Background image ALT text",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "line": 144
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "200",
+          "line": 145
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "line": 146
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "60",
+          "line": 147
+        },
+        {
+          "name": "URL",
+          "type": "URL",
+          "required": true,
+          "line": 148
+        },
+        {
+          "name": "Link text",
+          "type": "Not Empty",
+          "required": true,
+          "line": 149
+        }
+      ],
+      "startLine": 142
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 150
+        }
+      ],
+      "startLine": 150
+    },
+    {
+      "name": "Recipe Recommendation",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 151
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 152
+        },
+        {
+          "name": "Recipe Image",
+          "type": "Image",
+          "required": false,
+          "line": 153
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 154
+        },
+        {
+          "name": "Recipe Image Mobile",
+          "type": "Image",
+          "required": false,
+          "line": 155
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 156
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": false,
+          "minLength": "1",
+          "maxLength": "65",
+          "seo": true,
+          "line": 157
+        },
+        {
+          "name": "Recipe URL",
+          "type": "URL",
+          "required": false,
+          "line": 158
+        },
+        {
+          "name": "Button Label",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 159
+        },
+        {
+          "name": "Link text",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 160
+        }
+      ],
+      "required": false,
+      "startLine": 151
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 161
+        }
+      ],
+      "startLine": 161
+    },
+    {
+      "name": "Nescafe Accordion",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 162
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 163
+        },
+        {
+          "name": "Heading",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "40",
+          "line": 164
+        }
+      ],
+      "startLine": 162
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 165
+        }
+      ],
+      "startLine": 165
+    },
+    {
+      "name": "Nescafe Accordion Nutritions",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 166
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 167
+        },
+        {
+          "name": "Accordion Item Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 168
+        },
+        {
+          "name": "Energy Info",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 169
+        },
+        {
+          "name": "Nutrition Reference intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 170
+        },
+        {
+          "name": "Nutrition mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 171
+        },
+        {
+          "name": "Energy KJ Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 172
+        },
+        {
+          "name": "Energy KJ Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 173
+        },
+        {
+          "name": "Energy KJ Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 174
+        },
+        {
+          "name": "Energy KJ Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 175
+        },
+        {
+          "name": "Energy KJ Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 176
+        },
+        {
+          "name": "Energy Kcal Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 177
+        },
+        {
+          "name": "Energy Kcal Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 178
+        },
+        {
+          "name": "Energy Kcal Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 179
+        },
+        {
+          "name": "Energy Kcal Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 180
+        },
+        {
+          "name": "Energy Kcal Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 181
+        },
+        {
+          "name": "Fat Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 182
+        },
+        {
+          "name": "Fat Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 183
+        },
+        {
+          "name": "Fat Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 184
+        },
+        {
+          "name": "Fat Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 185
+        },
+        {
+          "name": "Fat Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 186
+        },
+        {
+          "name": "Fat List to select Color (Select from drop down list)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": false,
+          "line": 187
+        },
+        {
+          "name": "Saturates Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 188
+        },
+        {
+          "name": "Saturates Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 189
+        },
+        {
+          "name": "Saturates Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 190
+        },
+        {
+          "name": "Saturates Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 191
+        },
+        {
+          "name": "Saturates Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 192
+        },
+        {
+          "name": "Saturates List to select Color (Select from drop down list)",
+          "type": "Not Empty",
+          "required": false,
+          "line": 193
+        },
+        {
+          "name": "Carbohydrates Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 194
+        },
+        {
+          "name": "Carbohydrates Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 195
+        },
+        {
+          "name": "Carbohydrates Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 196
+        },
+        {
+          "name": "Carbohydrates Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 197
+        },
+        {
+          "name": "Carbohydrates Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 198
+        },
+        {
+          "name": "Sugars Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 199
+        },
+        {
+          "name": "Sugars Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 200
+        },
+        {
+          "name": "Sugars Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 201
+        },
+        {
+          "name": "Sugars Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 202
+        },
+        {
+          "name": "Sugars Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 203
+        },
+        {
+          "name": "Sugars List to select Color (Select from drop down list)",
+          "type": "Not Empty",
+          "required": false,
+          "line": 204
+        },
+        {
+          "name": "Fibre Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 205
+        },
+        {
+          "name": "Fibre Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 206
+        },
+        {
+          "name": "Fibre Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 207
+        },
+        {
+          "name": "Fibre Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 208
+        },
+        {
+          "name": "Fibre Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 209
+        },
+        {
+          "name": "Protein Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 210
+        },
+        {
+          "name": "Protein Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 211
+        },
+        {
+          "name": "Protein Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 212
+        },
+        {
+          "name": "Protein Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 213
+        },
+        {
+          "name": "Protein Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 214
+        },
+        {
+          "name": "Salt Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 215
+        },
+        {
+          "name": "Salt Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 216
+        },
+        {
+          "name": "Salt Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 217
+        },
+        {
+          "name": "Salt Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 218
+        },
+        {
+          "name": "Salt Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": false,
+          "line": 219
+        },
+        {
+          "name": "Salt List to select Color (Select from drop down list)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 220
+        }
+      ],
+      "required": false,
+      "startLine": 166
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 221
+        }
+      ],
+      "startLine": 221
+    },
+    {
+      "name": "Nescafe Accordion Ingredients",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 222
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 223
+        },
+        {
+          "name": "Accordion Item Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 224
+        },
+        {
+          "name": "Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "300",
+          "line": 225
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "line": 226
+        }
+      ],
+      "required": false,
+      "startLine": 222
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 227
+        }
+      ],
+      "startLine": 227
+    },
+    {
+      "name": "Nescafe Accordion Recycling",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 228
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 229
+        },
+        {
+          "name": "Accordion Item Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 230
+        },
+        {
+          "name": "Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "200",
+          "line": 231
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "line": 232
+        },
+        {
+          "name": "Recycling Icon",
+          "type": "Image",
+          "required": false,
+          "line": 233
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 234
+        }
+      ],
+      "required": false,
+      "startLine": 228
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 235
+        }
+      ],
+      "startLine": 235
+    },
+    {
+      "name": "Nescafe Accordion How to make",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 236
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 237
+        },
+        {
+          "name": "Accordion Item Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 238
+        },
+        {
+          "name": "Step 1 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 239
+        },
+        {
+          "name": "Step 1 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 240
+        },
+        {
+          "name": "Step 2 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 241
+        },
+        {
+          "name": "Step 2 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 242
+        },
+        {
+          "name": "Step 3 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 243
+        },
+        {
+          "name": "Step 3 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 244
+        },
+        {
+          "name": "Step 4 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 245
+        },
+        {
+          "name": "Step 4 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 246
+        },
+        {
+          "name": "Step 5 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 247
+        },
+        {
+          "name": "Step 5 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 248
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "line": 249
+        }
+      ],
+      "required": false,
+      "startLine": 236
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 250
+        }
+      ],
+      "startLine": 250
+    },
+    {
+      "name": "Nescafe Accordion Reviews",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 251
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 252
+        },
+        {
+          "name": "Accordion Item Title",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "line": 253
+        }
+      ],
+      "startLine": 251
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 254
+        }
+      ],
+      "startLine": 254
+    },
+    {
+      "name": "Nescafe Accordion FAQ",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 255
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 256
+        },
+        {
+          "name": "Accordion Item Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 257
+        },
+        {
+          "name": "Question 1 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 258
+        },
+        {
+          "name": "Question 1 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 259
+        },
+        {
+          "name": "Question 2 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 260
+        },
+        {
+          "name": "Question 2 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 261
+        },
+        {
+          "name": "Question 3 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 262
+        },
+        {
+          "name": "Question 3 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 263
+        },
+        {
+          "name": "Question 4 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 264
+        },
+        {
+          "name": "Question 4 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 265
+        },
+        {
+          "name": "Question 5 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 266
+        },
+        {
+          "name": "Question 5 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 267
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "line": 268
+        }
+      ],
+      "required": false,
+      "startLine": 255
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 269
+        }
+      ],
+      "startLine": 269
+    },
+    {
+      "name": "Coffee Range Teaser",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 270
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 271
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": true,
+          "seo": false,
+          "line": 272
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "seo": true,
+          "line": 273
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "60",
+          "line": 274
+        },
+        {
+          "name": "CTA URL",
+          "type": "URL",
+          "required": true,
+          "line": 275
+        },
+        {
+          "name": "CTA Link text",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 276
+        }
+      ],
+      "startLine": 270
+    }
+  ]
+}
