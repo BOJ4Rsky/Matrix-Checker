@@ -136,10 +136,35 @@ button#runBtn {
   transform: translateY(-3px);
 }
 
+#outputContainer {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+}
 
+#output table {
+  min-width: 1200px; /* або будь-який більший розмір */
+}
+
+/* Закріплення першої колонки таблиці */
+table th.field-col,
+table td:first-child {
+  position: sticky;
+  left: 0;                /* приклеюємо до лівого краю контейнера */
+  z-index: 2;             /* щоб бути вище інших клітинок */
+  background: #fafafa;    /* фон, щоб не було прозорості */
+  box-shadow: 2px 0 5px -2px rgba(0,0,0,0.1); /* легка тінь для відділення */
+}
+
+/* Для заголовка першої колонки (щоб він був вище всіх) */
+table th.field-col {
+  z-index: 3;
+}
+  
 @media (max-width:720px){ th.field-col{width:180px} }
 </style>
 </head>
+  
 <body>
 <div class="app">
 
@@ -874,7 +899,8 @@ function runCheck(){
 
       comp.rows.forEach((r,rIdx)=>{
         const tr=document.createElement('tr');
-        const th = document.createElement('th'); 
+        const th = document.createElement('th');
+        th.className = 'field-col'; // додано
         let fieldText = r.name;
         const min = r.minLength, max = r.maxLength;
         if(min !== undefined || max !== undefined){
@@ -1098,5 +1124,6 @@ backToTopBtn.addEventListener("click", () => {
 
 </body>
 </html>
+
 
 
