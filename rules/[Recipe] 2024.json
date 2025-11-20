@@ -1,0 +1,2665 @@
+{
+  "pageName": "Recipe 2024",
+  "startOffset": 9,
+  "interOffset": 0,
+  "components": [
+    {
+      "name": "SEO",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "color": "#FFA500",
+          "line": 9
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "color": "#808080",
+          "line": 10
+        },
+        {
+          "name": "CMS Title",
+          "type": "Not Empty",
+          "required": true,
+          "minLength": "1",
+          "maxLength": "50",
+          "line": 11
+        },
+        {
+          "name": "Meta Title",
+          "type": "Not Empty",
+          "required": true,
+          "minLength": "40",
+          "maxLength": "70",
+          "line": 12
+        },
+        {
+          "name": "Meta description",
+          "type": "Not Empty",
+          "required": true,
+          "minLength": "100",
+          "maxLength": "170",
+          "line": 13
+        },
+        {
+          "name": "URL alias",
+          "type": "URL",
+          "required": true,
+          "line": 14
+        },
+        {
+          "name": "Keywords",
+          "type": "Not Empty",
+          "required": false,
+          "line": 15
+        },
+        {
+          "name": "Content Reference ID",
+          "type": "Not Empty",
+          "required": true,
+          "line": 16
+        }
+      ],
+      "startLine": 9
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 17
+        }
+      ],
+      "startLine": 17
+    },
+    {
+      "name": "Recipe Tags",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 18
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 19
+        },
+        {
+          "name": "Cakes & desserts",
+          "type": "Not Empty",
+          "required": false,
+          "line": 20
+        },
+        {
+          "name": "Recipe Drinks 1",
+          "type": "YES/NO",
+          "required": false,
+          "line": 21
+        },
+        {
+          "name": "Recipe Drinks 2",
+          "type": "YES/NO",
+          "required": false,
+          "line": 22
+        },
+        {
+          "name": "Recipe Drinks 3",
+          "type": "YES/NO",
+          "required": false,
+          "line": 23
+        },
+        {
+          "name": "Recipe Drinks 4",
+          "type": "YES/NO",
+          "required": false,
+          "line": 24
+        },
+        {
+          "name": "Recipe Drinks 5",
+          "type": "YES/NO",
+          "required": false,
+          "line": 25
+        },
+        {
+          "name": "Recipe Drinks 6",
+          "type": "YES/NO",
+          "required": false,
+          "line": 26
+        },
+        {
+          "name": "Recipe Drinks 7",
+          "type": "YES/NO",
+          "required": false,
+          "line": 27
+        },
+        {
+          "name": "Recipe Drinks 8",
+          "type": "YES/NO",
+          "required": false,
+          "line": 28
+        },
+        {
+          "name": "Recipe Drinks 9",
+          "type": "YES/NO",
+          "required": false,
+          "line": 29
+        },
+        {
+          "name": "Recipe Drinks 10",
+          "type": "YES/NO",
+          "required": false,
+          "line": 30
+        },
+        {
+          "name": "Recipe Drinks 11",
+          "type": "YES/NO",
+          "required": false,
+          "line": 31
+        },
+        {
+          "name": "Recipe Drinks 12",
+          "type": "YES/NO",
+          "required": false,
+          "line": 32
+        },
+        {
+          "name": "Recipe features 1",
+          "type": "YES/NO",
+          "required": false,
+          "line": 33
+        },
+        {
+          "name": "Recipe features 2",
+          "type": "YES/NO",
+          "required": false,
+          "line": 34
+        },
+        {
+          "name": "Recipe features 3",
+          "type": "YES/NO",
+          "required": false,
+          "line": 35
+        },
+        {
+          "name": "Recipe features 4",
+          "type": "YES/NO",
+          "required": false,
+          "line": 36
+        },
+        {
+          "name": "Recipe features 5",
+          "type": "YES/NO",
+          "required": false,
+          "line": 37
+        },
+        {
+          "name": "Recipe features 6",
+          "type": "YES/NO",
+          "required": false,
+          "line": 38
+        },
+        {
+          "name": "Occasion 1",
+          "type": "YES/NO",
+          "required": false,
+          "line": 39
+        },
+        {
+          "name": "Occasion 2",
+          "type": "YES/NO",
+          "required": false,
+          "line": 40
+        },
+        {
+          "name": "Occasion 3",
+          "type": "YES/NO",
+          "required": false,
+          "line": 41
+        },
+        {
+          "name": "Occasion 4",
+          "type": "YES/NO",
+          "required": false,
+          "line": 42
+        },
+        {
+          "name": "Occasion 5",
+          "type": "YES/NO",
+          "required": false,
+          "line": 43
+        },
+        {
+          "name": "Occasion 6",
+          "type": "YES/NO",
+          "required": false,
+          "line": 44
+        },
+        {
+          "name": "Occasion 7",
+          "type": "YES/NO",
+          "required": false,
+          "line": 45
+        },
+        {
+          "name": "Occasion 8",
+          "type": "YES/NO",
+          "required": false,
+          "line": 46
+        },
+        {
+          "name": "Key ingredients 1",
+          "type": "YES/NO",
+          "required": false,
+          "color": "#FFA500",
+          "line": 47
+        },
+        {
+          "name": "Key ingredients 2",
+          "type": "YES/NO",
+          "required": false,
+          "line": 48
+        },
+        {
+          "name": "Key ingredients 3",
+          "type": "YES/NO",
+          "required": false,
+          "line": 49
+        },
+        {
+          "name": "Key ingredients 4",
+          "type": "YES/NO",
+          "required": false,
+          "line": 50
+        },
+        {
+          "name": "Key ingredients 5",
+          "type": "YES/NO",
+          "required": false,
+          "line": 51
+        },
+        {
+          "name": "Key ingredients 6",
+          "type": "YES/NO",
+          "required": false,
+          "line": 52
+        },
+        {
+          "name": "Key ingredients 7",
+          "type": "YES/NO",
+          "required": false,
+          "line": 53
+        },
+        {
+          "name": "Key ingredients 8",
+          "type": "YES/NO",
+          "required": false,
+          "line": 54
+        },
+        {
+          "name": "Key ingredients 9",
+          "type": "YES/NO",
+          "required": false,
+          "line": 55
+        },
+        {
+          "name": "Key ingredients 10",
+          "type": "YES/NO",
+          "required": false,
+          "line": 56
+        },
+        {
+          "name": "Key ingredients 11",
+          "type": "YES/NO",
+          "required": false,
+          "line": 57
+        },
+        {
+          "name": "Key ingredients 12",
+          "type": "YES/NO",
+          "required": false,
+          "line": 58
+        },
+        {
+          "name": "Seasonal",
+          "type": "Not Empty",
+          "required": true,
+          "line": 59
+        }
+      ],
+      "startLine": 18
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 60
+        }
+      ],
+      "startLine": 60
+    },
+    {
+      "name": "Recipe Hero Banner",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 61
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 62
+        },
+        {
+          "name": "Eyebrow title",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "25",
+          "line": 63
+        },
+        {
+          "name": "Caption",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "25",
+          "line": 64
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "line": 65
+        },
+        {
+          "name": "Internal links URLs",
+          "type": "Not Empty",
+          "required": false,
+          "line": 66
+        },
+        {
+          "name": "Preparation time",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "line": 67
+        },
+        {
+          "name": "Preparation label",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "line": 68
+        },
+        {
+          "name": "Recipe Image",
+          "type": "Image",
+          "required": true,
+          "line": 69
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "seo": true,
+          "line": 70
+        },
+        {
+          "name": "Steps Label",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "line": 71
+        },
+        {
+          "name": "Steps Count",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "line": 72
+        },
+        {
+          "name": "Ingredients Label",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "line": 73
+        },
+        {
+          "name": "Ingredients Count",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "line": 74
+        },
+        {
+          "name": "Tag label 1",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 75
+        },
+        {
+          "name": "Tag label 2",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 76
+        }
+      ],
+      "startLine": 61
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 77
+        }
+      ],
+      "startLine": 77
+    },
+    {
+      "name": "Recipe Ingredients and Equipments",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 78
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 79
+        },
+        {
+          "name": "Ingredients Label",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "20",
+          "line": 80
+        },
+        {
+          "name": "Serving label",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "20",
+          "line": 81
+        },
+        {
+          "name": "Max Serving Count",
+          "type": "Not Empty",
+          "required": true,
+          "line": 82
+        },
+        {
+          "name": "Recipe ingredients BG Image",
+          "type": "Image",
+          "required": true,
+          "line": 83
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "seo": true,
+          "line": 84
+        },
+        {
+          "name": "Ingredients item 1 Name",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 85
+        },
+        {
+          "name": "Ingredients item 1 Primary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 86
+        },
+        {
+          "name": "Ingredients item 1 Primary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 87
+        },
+        {
+          "name": "Ingredients item 1 Primary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 88
+        },
+        {
+          "name": "Ingredients item 1 Primary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 89
+        },
+        {
+          "name": "Ingredients item 1 Secondary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 90
+        },
+        {
+          "name": "Ingredients item 1 Secondary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 91
+        },
+        {
+          "name": "Ingredients item 1 Secondary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 92
+        },
+        {
+          "name": "Ingredients item 1 Secondary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 93
+        },
+        {
+          "name": "Ingredients item 2 Name",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 94
+        },
+        {
+          "name": "Ingredients item 2 Primary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 95
+        },
+        {
+          "name": "Ingredients item 2 Primary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 96
+        },
+        {
+          "name": "Ingredients item 2 Primary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 97
+        },
+        {
+          "name": "Ingredients item 2 Primary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 98
+        },
+        {
+          "name": "Ingredients item 2 Secondary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 99
+        },
+        {
+          "name": "Ingredients item 2 Secondary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 100
+        },
+        {
+          "name": "Ingredients item 2 Secondary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 101
+        },
+        {
+          "name": "Ingredients item 2 Secondary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 102
+        },
+        {
+          "name": "Ingredients item 3 Name",
+          "type": "Not Empty",
+          "required": false,
+          "minLength": "1",
+          "maxLength": "55",
+          "seo": true,
+          "line": 103
+        },
+        {
+          "name": "Ingredients item 3 Primary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 104
+        },
+        {
+          "name": "Ingredients item 3 Primary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 105
+        },
+        {
+          "name": "Ingredients item 3 Primary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 106
+        },
+        {
+          "name": "Ingredients item 3 Primary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 107
+        },
+        {
+          "name": "Ingredients item 3 Secondary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 108
+        },
+        {
+          "name": "Ingredients item 3 Secondary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 109
+        },
+        {
+          "name": "Ingredients item 3 Secondary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 110
+        },
+        {
+          "name": "Ingredients item 3 Secondary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 111
+        },
+        {
+          "name": "Ingredients item 4 Name",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 112
+        },
+        {
+          "name": "Ingredients item 4 Primary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 113
+        },
+        {
+          "name": "Ingredients item 4 Primary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 114
+        },
+        {
+          "name": "Ingredients item 4 Primary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 115
+        },
+        {
+          "name": "Ingredients item 4 Primary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 116
+        },
+        {
+          "name": "Ingredients item 4 Secondary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 117
+        },
+        {
+          "name": "Ingredients item 4 Secondary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 118
+        },
+        {
+          "name": "Ingredients item 4 Secondary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 119
+        },
+        {
+          "name": "Ingredients item 4 Secondary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 120
+        },
+        {
+          "name": "Ingredients item 5 Name",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 121
+        },
+        {
+          "name": "Ingredients item 5 Primary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 122
+        },
+        {
+          "name": "Ingredients item 5 Primary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 123
+        },
+        {
+          "name": "Ingredients item 5 Primary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 124
+        },
+        {
+          "name": "Ingredients item 5 Primary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 125
+        },
+        {
+          "name": "Ingredients item 5 Secondary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 126
+        },
+        {
+          "name": "Ingredients item 5 Secondary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 127
+        },
+        {
+          "name": "Ingredients item 5 Secondary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 128
+        },
+        {
+          "name": "Ingredients item 5 Secondary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 129
+        },
+        {
+          "name": "Ingredients item 6 Name",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 130
+        },
+        {
+          "name": "Ingredients item 6 Primary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 131
+        },
+        {
+          "name": "Ingredients item 6 Primary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 132
+        },
+        {
+          "name": "Ingredients item 6 Primary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 133
+        },
+        {
+          "name": "Ingredients item 6 Primary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 134
+        },
+        {
+          "name": "Ingredients item 6 Secondary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 135
+        },
+        {
+          "name": "Ingredients item 6 Secondary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 136
+        },
+        {
+          "name": "Ingredients item 6 Secondary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 137
+        },
+        {
+          "name": "Ingredients item 6 Secondary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 138
+        },
+        {
+          "name": "Ingredients item 7 Name",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 139
+        },
+        {
+          "name": "Ingredients item 7 Primary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 140
+        },
+        {
+          "name": "Ingredients item 7 Primary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 141
+        },
+        {
+          "name": "Ingredients item 7 Primary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 142
+        },
+        {
+          "name": "Ingredients item 7 Primary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 143
+        },
+        {
+          "name": "Ingredients item 7 Secondary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 144
+        },
+        {
+          "name": "Ingredients item 7 Secondary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 145
+        },
+        {
+          "name": "Ingredients item 7 Secondary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 146
+        },
+        {
+          "name": "Ingredients item 7 Secondary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 147
+        },
+        {
+          "name": "Ingredients item 8 Name",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 148
+        },
+        {
+          "name": "Ingredients item 8 Primary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 149
+        },
+        {
+          "name": "Ingredients item 8 Primary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 150
+        },
+        {
+          "name": "Ingredients item 8 Primary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 151
+        },
+        {
+          "name": "Ingredients item 8 Primary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 152
+        },
+        {
+          "name": "Ingredients item 8 Secondary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 153
+        },
+        {
+          "name": "Ingredients item 8 Secondary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 154
+        },
+        {
+          "name": "Ingredients item 8 Secondary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 155
+        },
+        {
+          "name": "Ingredients item 8 Secondary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 156
+        },
+        {
+          "name": "Ingredients item 9 Name",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 157
+        },
+        {
+          "name": "Ingredients item 9 Primary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 158
+        },
+        {
+          "name": "Ingredients item 9 Primary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 159
+        },
+        {
+          "name": "Ingredients item 9 Primary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 160
+        },
+        {
+          "name": "Ingredients item 9 Primary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 161
+        },
+        {
+          "name": "Ingredients item 9 Secondary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 162
+        },
+        {
+          "name": "Ingredients item 9 Secondary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 163
+        },
+        {
+          "name": "Ingredients item 9 Secondary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 164
+        },
+        {
+          "name": "Ingredients item 9 Secondary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 165
+        },
+        {
+          "name": "Ingredients item 10 Name",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 166
+        },
+        {
+          "name": "Ingredients item 10 Primary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 167
+        },
+        {
+          "name": "Ingredients item 10 Primary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 168
+        },
+        {
+          "name": "Ingredients item 10 Primary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 169
+        },
+        {
+          "name": "Ingredients item 10 Primary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 170
+        },
+        {
+          "name": "Ingredients item 10 Secondary Quantity (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 171
+        },
+        {
+          "name": "Ingredients item 10 Secondary Unit (text)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 172
+        },
+        {
+          "name": "Ingredients item 10 Secondary Min range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 173
+        },
+        {
+          "name": "Ingredients item 10 Secondary Max range (number)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 174
+        },
+        {
+          "name": "Equipment Label",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "20",
+          "line": 175
+        },
+        {
+          "name": "Equipment item 1",
+          "type": "Image",
+          "required": true,
+          "line": 176
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "seo": true,
+          "line": 177
+        },
+        {
+          "name": "Title 1",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "21",
+          "line": 178
+        },
+        {
+          "name": "Equipment item 2",
+          "type": "Image",
+          "required": false,
+          "line": 179
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 180
+        },
+        {
+          "name": "Title 2",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "21",
+          "line": 181
+        },
+        {
+          "name": "Equipment item 3",
+          "type": "Image",
+          "required": false,
+          "line": 182
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 183
+        },
+        {
+          "name": "Title 3",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "21",
+          "line": 184
+        },
+        {
+          "name": "Equipment item 4",
+          "type": "Image",
+          "required": false,
+          "seo": false,
+          "line": 185
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 186
+        },
+        {
+          "name": "Title 4",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "21",
+          "line": 187
+        },
+        {
+          "name": "Equipment item 5",
+          "type": "Image",
+          "required": false,
+          "seo": false,
+          "line": 188
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 189
+        },
+        {
+          "name": "Title 5",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "21",
+          "line": 190
+        },
+        {
+          "name": "Recommended Label",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "20",
+          "line": 191
+        },
+        {
+          "name": "Recommended product",
+          "type": "URL",
+          "required": true,
+          "line": 192
+        }
+      ],
+      "startLine": 78
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 193
+        }
+      ],
+      "startLine": 193
+    },
+    {
+      "name": "Recipe Steps",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 194
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 195
+        },
+        {
+          "name": "Recipe Step Label",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "line": 196
+        },
+        {
+          "name": "STEP 1 Step number",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "line": 197
+        },
+        {
+          "name": "STEP 1 Title",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 198
+        },
+        {
+          "name": "STEP 1 Description",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 199
+        },
+        {
+          "name": "STEP 1 Image",
+          "type": "Image",
+          "required": true,
+          "line": 200
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "seo": true,
+          "line": 201
+        },
+        {
+          "name": "STEP 1 Image Mobile",
+          "type": "Image",
+          "required": true,
+          "seo": false,
+          "line": 202
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "seo": true,
+          "line": 203
+        },
+        {
+          "name": "STEP 1 Video",
+          "type": "URL",
+          "required": false,
+          "line": 204
+        },
+        {
+          "name": "STEP 2 Step number",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 205
+        },
+        {
+          "name": "STEP 2 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 206
+        },
+        {
+          "name": "STEP 2 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 207
+        },
+        {
+          "name": "STEP 2 Image",
+          "type": "Image",
+          "required": false,
+          "line": 208
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 209
+        },
+        {
+          "name": "STEP 2 Image Mobile",
+          "type": "Image",
+          "required": false,
+          "line": 210
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 211
+        },
+        {
+          "name": "STEP 2 Video",
+          "type": "URL",
+          "required": false,
+          "line": 212
+        },
+        {
+          "name": "STEP 3 Step number",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 213
+        },
+        {
+          "name": "STEP 3 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 214
+        },
+        {
+          "name": "STEP 3 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 215
+        },
+        {
+          "name": "STEP 3 Image",
+          "type": "Image",
+          "required": false,
+          "line": 216
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 217
+        },
+        {
+          "name": "STEP 3 Image Mobile",
+          "type": "Image",
+          "required": false,
+          "seo": false,
+          "line": 218
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 219
+        },
+        {
+          "name": "STEP 3 Video",
+          "type": "URL",
+          "required": false,
+          "line": 220
+        },
+        {
+          "name": "STEP 4 Step number",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 221
+        },
+        {
+          "name": "STEP 4 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 222
+        },
+        {
+          "name": "STEP 4 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 223
+        },
+        {
+          "name": "STEP 4 Image",
+          "type": "Image",
+          "required": false,
+          "line": 224
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 225
+        },
+        {
+          "name": "STEP 4 Image Mobile",
+          "type": "Image",
+          "required": false,
+          "seo": false,
+          "line": 226
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 227
+        },
+        {
+          "name": "STEP 4 Video",
+          "type": "URL",
+          "required": false,
+          "line": 228
+        },
+        {
+          "name": "STEP 5 Step number",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 229
+        },
+        {
+          "name": "STEP 5 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 230
+        },
+        {
+          "name": "STEP 5 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 231
+        },
+        {
+          "name": "STEP 5 Image",
+          "type": "Image",
+          "required": false,
+          "line": 232
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 233
+        },
+        {
+          "name": "STEP 5 Image Mobile",
+          "type": "Image",
+          "required": false,
+          "line": 234
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 235
+        },
+        {
+          "name": "STEP 5 Video",
+          "type": "URL",
+          "required": false,
+          "seo": false,
+          "line": 236
+        },
+        {
+          "name": "STEP 6 Step number",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 237
+        },
+        {
+          "name": "STEP 6 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 238
+        },
+        {
+          "name": "STEP 6 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 239
+        },
+        {
+          "name": "STEP 6 Image",
+          "type": "Image",
+          "required": false,
+          "line": 240
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 241
+        },
+        {
+          "name": "STEP 6 Image Mobile",
+          "type": "Image",
+          "required": false,
+          "line": 242
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 243
+        },
+        {
+          "name": "STEP 6 Video",
+          "type": "URL",
+          "required": false,
+          "line": 244
+        },
+        {
+          "name": "STEP 7 Step number",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 245
+        },
+        {
+          "name": "STEP 7 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 246
+        },
+        {
+          "name": "STEP 7 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 247
+        },
+        {
+          "name": "STEP 7 Image",
+          "type": "Image",
+          "required": false,
+          "seo": false,
+          "line": 248
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 249
+        },
+        {
+          "name": "STEP 7 Image Mobile",
+          "type": "Image",
+          "required": false,
+          "seo": false,
+          "line": 250
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 251
+        },
+        {
+          "name": "STEP 7 Video",
+          "type": "URL",
+          "required": false,
+          "line": 252
+        },
+        {
+          "name": "STEP 8 Step number",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 253
+        },
+        {
+          "name": "STEP 8 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 254
+        },
+        {
+          "name": "STEP 8 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 255
+        },
+        {
+          "name": "STEP 8 Image",
+          "type": "Image",
+          "required": false,
+          "line": 256
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 257
+        },
+        {
+          "name": "STEP 8 Image Mobile",
+          "type": "Image",
+          "required": false,
+          "line": 258
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 259
+        },
+        {
+          "name": "STEP 8 Video",
+          "type": "URL",
+          "required": false,
+          "line": 260
+        },
+        {
+          "name": "STEP 9 Step number",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 261
+        },
+        {
+          "name": "STEP 9 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 262
+        },
+        {
+          "name": "STEP 9 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 263
+        },
+        {
+          "name": "STEP 9 Image",
+          "type": "Image",
+          "required": false,
+          "seo": false,
+          "line": 264
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 265
+        },
+        {
+          "name": "STEP 9 Image Mobile",
+          "type": "Image",
+          "required": false,
+          "seo": false,
+          "line": 266
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 267
+        },
+        {
+          "name": "STEP 9 Video",
+          "type": "URL",
+          "required": false,
+          "line": 268
+        },
+        {
+          "name": "STEP 10 Step number",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 269
+        },
+        {
+          "name": "STEP 10 Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 270
+        },
+        {
+          "name": "STEP 10 Description",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 271
+        },
+        {
+          "name": "STEP 10 Image",
+          "type": "Image",
+          "required": false,
+          "line": 272
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 273
+        },
+        {
+          "name": "STEP 10 Image Mobile",
+          "type": "Image",
+          "required": false,
+          "line": 274
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 275
+        },
+        {
+          "name": "STEP 10 Video",
+          "type": "URL",
+          "required": false,
+          "line": 276
+        }
+      ],
+      "startLine": 194
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 277
+        }
+      ],
+      "startLine": 277
+    },
+    {
+      "name": "Recipe Full Video",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 278
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 279
+        },
+        {
+          "name": "Video thumbnail",
+          "type": "Image",
+          "required": false,
+          "line": 280
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 281
+        },
+        {
+          "name": "Video Mobile thumbnail",
+          "type": "Image",
+          "required": false,
+          "line": 282
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": false,
+          "altLinked": true,
+          "seo": true,
+          "line": 283
+        },
+        {
+          "name": "Video caption",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 284
+        },
+        {
+          "name": "Video length",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 285
+        },
+        {
+          "name": "Video",
+          "type": "URL",
+          "required": false,
+          "seo": true,
+          "line": 286
+        },
+        {
+          "name": "Optional video caption",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 287
+        }
+      ],
+      "required": false,
+      "startLine": 278
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 288
+        }
+      ],
+      "startLine": 288
+    },
+    {
+      "name": "Community Card",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 289
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 290
+        },
+        {
+          "name": "Image",
+          "type": "Image",
+          "required": true,
+          "line": 291
+        },
+        {
+          "name": "Alt-text",
+          "type": "Not Empty",
+          "required": true,
+          "altLinked": true,
+          "seo": true,
+          "line": 292
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "55",
+          "line": 293
+        },
+        {
+          "name": "Subtitle",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "40",
+          "line": 294
+        },
+        {
+          "name": "Body",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "150",
+          "line": 295
+        }
+      ],
+      "startLine": 289
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 296
+        }
+      ],
+      "startLine": 296
+    },
+    {
+      "name": "Nescafe Accordion Nutritions",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 297
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": false,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 298
+        },
+        {
+          "name": "Accordion Item Title",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 299
+        },
+        {
+          "name": "Energy Info",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 300
+        },
+        {
+          "name": "Nutrition Reference intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 301
+        },
+        {
+          "name": "Nutrition mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 302
+        },
+        {
+          "name": "Energy KJ Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 303
+        },
+        {
+          "name": "Energy KJ Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 304
+        },
+        {
+          "name": "Energy KJ Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 305
+        },
+        {
+          "name": "Energy KJ Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 306
+        },
+        {
+          "name": "Energy KJ Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 307
+        },
+        {
+          "name": "Energy Kcal Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 308
+        },
+        {
+          "name": "Energy Kcal Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 309
+        },
+        {
+          "name": "Energy Kcal Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 310
+        },
+        {
+          "name": "Energy Kcal Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 311
+        },
+        {
+          "name": "Energy Kcal Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 312
+        },
+        {
+          "name": "Fat Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 313
+        },
+        {
+          "name": "Fat Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 314
+        },
+        {
+          "name": "Fat Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 315
+        },
+        {
+          "name": "Fat Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 316
+        },
+        {
+          "name": "Fat Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 317
+        },
+        {
+          "name": "Fat List to select Color (Select from drop down list)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": false,
+          "line": 318
+        },
+        {
+          "name": "Saturates Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 319
+        },
+        {
+          "name": "Saturates Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 320
+        },
+        {
+          "name": "Saturates Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 321
+        },
+        {
+          "name": "Saturates Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 322
+        },
+        {
+          "name": "Saturates Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 323
+        },
+        {
+          "name": "Saturates List to select Color (Select from drop down list)",
+          "type": "Not Empty",
+          "required": false,
+          "line": 324
+        },
+        {
+          "name": "Carbohydrates Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 325
+        },
+        {
+          "name": "Carbohydrates Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 326
+        },
+        {
+          "name": "Carbohydrates Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 327
+        },
+        {
+          "name": "Carbohydrates Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 328
+        },
+        {
+          "name": "Carbohydrates Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 329
+        },
+        {
+          "name": "Sugars Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 330
+        },
+        {
+          "name": "Sugars Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 331
+        },
+        {
+          "name": "Sugars Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 332
+        },
+        {
+          "name": "Sugars Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 333
+        },
+        {
+          "name": "Sugars Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 334
+        },
+        {
+          "name": "Sugars List to select Color (Select from drop down list)",
+          "type": "Not Empty",
+          "required": false,
+          "line": 335
+        },
+        {
+          "name": "Fibre Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 336
+        },
+        {
+          "name": "Fibre Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 337
+        },
+        {
+          "name": "Fibre Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 338
+        },
+        {
+          "name": "Fibre Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 339
+        },
+        {
+          "name": "Fibre Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 340
+        },
+        {
+          "name": "Protein Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 341
+        },
+        {
+          "name": "Protein Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 342
+        },
+        {
+          "name": "Protein Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 343
+        },
+        {
+          "name": "Protein Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 344
+        },
+        {
+          "name": "Protein Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 345
+        },
+        {
+          "name": "Salt Nutrition Per 100g",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 346
+        },
+        {
+          "name": "Salt Nutrition Per 100ml",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 347
+        },
+        {
+          "name": "Salt Nutrition %RI",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 348
+        },
+        {
+          "name": "Salt Nutrition Per mug",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 349
+        },
+        {
+          "name": "Salt Reference Intake",
+          "type": "Not Empty",
+          "required": false,
+          "seo": false,
+          "line": 350
+        },
+        {
+          "name": "Salt List to select Color (Select from drop down list)",
+          "type": "Not Empty",
+          "required": false,
+          "seo": true,
+          "line": 351
+        }
+      ],
+      "required": false,
+      "startLine": 297
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 352
+        }
+      ],
+      "startLine": 352
+    },
+    {
+      "name": "Nescafe Accordion Reviews",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 353
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 354
+        },
+        {
+          "name": "Accordion Item Title",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "line": 355
+        }
+      ],
+      "startLine": 353
+    },
+    {
+      "name": "Separator",
+      "rows": [
+        {
+          "name": "Blank line",
+          "type": "Tech info",
+          "required": true,
+          "color": "#FFFFFF",
+          "line": 356
+        }
+      ],
+      "startLine": 356
+    },
+    {
+      "name": "Related Recipe Cards",
+      "rows": [
+        {
+          "name": "Orange line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#FFA500",
+          "line": 357
+        },
+        {
+          "name": "Gray line",
+          "type": "Tech info",
+          "required": true,
+          "draggingAlt": false,
+          "color": "#808080",
+          "line": 358
+        },
+        {
+          "name": "Title",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "line": 359
+        },
+        {
+          "name": "Content card 1",
+          "type": "URL",
+          "required": true,
+          "line": 360
+        },
+        {
+          "name": "Content card 2",
+          "type": "URL",
+          "required": true,
+          "line": 361
+        },
+        {
+          "name": "Link text",
+          "type": "Not Empty",
+          "required": true,
+          "seo": true,
+          "minLength": "1",
+          "maxLength": "100",
+          "line": 362
+        }
+      ],
+      "startLine": 357
+    }
+  ]
+}
