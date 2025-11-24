@@ -263,7 +263,6 @@
           "name": "Key ingredients 1",
           "type": "YES/NO",
           "required": false,
-          "color": "#FFA500",
           "line": 47
         },
         {
