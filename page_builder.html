@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Builder</title>
+<style>
+  :root {
+    --bg: #f4f6f8;
+    --card: #fff;
+    --accent: #0078d4;
+    --accent-dark: #005a9e;
+    --muted: #6b7280;
+    --radius: 10px;
+  }
+  body { font-family: "Segoe UI", Roboto, Arial, sans-serif; background: var(--bg); margin: 20px; color: #222; }
+  .app { max-width: 900px; margin: 0 auto; padding: 10px; }
+  .card { background: var(--card); border-radius: var(--radius); box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 16px; margin-bottom: 16px; }
+  h1 { margin: 0 0 10px 0; font-size: 20px; }
+  .controls { display: flex; gap: 8px; margin-bottom: 12px; align-items: center; }
+  button { background: var(--accent); color: #fff; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+  button.ghost { background: #f0f0f0; color: #111; border: 1px solid #e5e7eb; }
+  input[type=text], input[type=number], select { padding: 6px; border-radius: 6px; border: 1px solid #d1d5db; }
+  .component-list { border: 1px solid #d1d5db; border-radius:6px; padding: 8px; min-height: 100px; background:#f8fafc; }
+  .component-item { background:#fff; padding:6px 10px; margin-bottom:6px; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.05); display:grid; grid-template-columns:1fr 120px 80px; align-items:center; gap:10px; cursor:move; }
+  .dragging { opacity:0.5; }
+</style>
+</head>
+<body>
+
+<div class="app">
+  <div class="card">
+    <h1>Page Builder</h1>
+    <div class="controls">
+      <button onclick="savePage()">Save Page</button>
+      <button class="ghost" onclick="loadPage()">Load Page</button>
+      <button class="ghost" onclick="clearPage()">Clear All</button>
+      <input type="text" id="pageName" placeholder="Page Name" style="margin-left:auto;">
+    </div>
+
+    <div style="margin-bottom:10px;">
+      <label>Start Offset: <input type="number" id="startOffset" value="1" min="0"></label>
+      <label style="margin-left:20px;">Inter-component Offset: <input type="number" id="interOffset" value="0" min="0"></label>
+    </div>
+
+    <div style="margin-bottom:10px;">
+      <label>Choose Component:
+        <select id="componentDropdown">
+          <option value="">-- Select Component --</option>
+        </select>
+      </label>
+      <button onclick="addComponent()">Add Component</button>
+    </div>
+
+    <div style="margin-bottom:10px;">
+      <button onclick="selectComponentFiles()">Load Component JSON Files</button>
+    </div>
+
+    <div class="component-list" id="pageComponents">
+      <!-- Components will appear here -->
+    </div>
+
+  </div>
+</div>
+
+<script>
+let page = { pageName:'', startOffset:1, interOffset:0, components:[] };
+let availableComponents = []; // store loaded components
+
+function selectComponentFiles() {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.multiple = true;
+  input.accept = '.json';
+
+  input.onchange = e => {
+    const files = Array.from(input.files);
+    if (files.length === 0) return;
+
+    const promises = files.map(f => {
+      return new Promise(resolve => {
+        const reader = new FileReader();
+        reader.onload = ev => {
+          try {
+            const comp = JSON.parse(ev.target.result);
+            if(!comp.name || !Array.isArray(comp.rows)) throw 'Invalid component format';
+            resolve(comp);
+          } catch(err) {
+            console.warn('Invalid JSON', f.name, err);
+            resolve(null);
+          }
+        };
+        reader.readAsText(f);
+      });
+    });
+
+    Promise.all(promises).then(results => {
+      const validComponents = results.filter(c => c !== null);
+      if(validComponents.length === 0){ 
+        alert("No valid JSON components found."); 
+        return; 
+      }
+
+      availableComponents = availableComponents.concat(validComponents);
+
+      const dropdown = document.getElementById('componentDropdown');
+      dropdown.innerHTML = '<option value="">-- Select Component --</option>';
+      availableComponents.forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c.name;
+        opt.textContent = c.name;
+        dropdown.appendChild(opt);
+      });
+
+      console.log('Components loaded:', availableComponents.map(c => c.name));
+    });
+  };
+
+  input.click();
+}
+
+function addComponent(){
+  const dropdown = document.getElementById('componentDropdown');
+  const sel = dropdown.value;
+  if(!sel) return alert("Select component");
+
+  const comp = availableComponents.find(c => c.name === sel);
+  if(!comp) return;
+
+  const compCopy = JSON.parse(JSON.stringify(comp));
+  page.components.push(compCopy);
+  renderPageComponents();
+}
+
+function renderPageComponents(){
+  const list = document.getElementById('pageComponents');
+  list.innerHTML = '';
+
+  page.components.forEach((c, idx) => {
+    const div = document.createElement('div');
+    div.className = 'component-item';
+    div.draggable = true;
+    div.dataset.index = idx;
+
+    // Назва компоненту
+    const nameCol = document.createElement('div');
+    nameCol.textContent = c.name;
+
+    // Required чекбокс
+    const reqCol = document.createElement('div');
+    reqCol.style.textAlign = 'center';
+    reqCol.innerHTML = `<label>
+      <input type="checkbox" class="comp-required" ${c.required !== false ? 'checked' : ''} onchange="toggleComponentRequired(${idx}, this.checked)">
+      Required
+    </label>`;
+
+    // Remove кнопка
+    const removeCol = document.createElement('div');
+    removeCol.style.textAlign = 'center';
+    removeCol.innerHTML = `<button onclick="removeComponent(${idx})">Remove</button>`;
+
+    div.appendChild(nameCol);
+    div.appendChild(reqCol);
+    div.appendChild(removeCol);
+
+    list.appendChild(div);
+
+    // drag events
+    div.addEventListener('dragstart', e => {
+      div.classList.add('dragging');
+      e.dataTransfer.effectAllowed = 'move';
+    });
+
+    div.addEventListener('dragend', e => {
+      div.classList.remove('dragging');
+      reorderComponents();
+    });
+
+    div.addEventListener('dragover', e => {
+      e.preventDefault();
+      const dragging = document.querySelector('.dragging');
+      if (!dragging || dragging === div) return;
+      const rect = div.getBoundingClientRect();
+      const next = (e.clientY - rect.top) > rect.height / 2;
+      list.insertBefore(dragging, next ? div.nextSibling : div);
+    });
+  });
+}
+
+function toggleComponentRequired(idx, isRequired){
+  page.components[idx].required = isRequired;
+}
+
+function reorderComponents(){
+  const list = document.getElementById('pageComponents');
+  const newComps = [];
+  list.querySelectorAll('.component-item').forEach((div, newIdx) => {
+    const oldIdx = parseInt(div.dataset.index);
+    newComps.push(page.components[oldIdx]);
+    div.dataset.index = newIdx;
+  });
+  page.components = newComps;
+}
+
+function removeComponent(idx){
+  page.components.splice(idx,1);
+  renderPageComponents();
+}
+
+function savePage(){
+  const name = document.getElementById('pageName').value.trim();
+  if(!name){ alert("Enter page name"); return; }
+  page.pageName=name;
+  page.startOffset=parseInt(document.getElementById('startOffset').value)||0;
+  page.interOffset=parseInt(document.getElementById('interOffset').value)||0;
+
+  let currentLine = page.startOffset;
+  page.components.forEach(c=>{
+    c.startLine = currentLine;
+
+    if(c.required === false){
+      c.rows.forEach(r => { r.required = false; });
+    }
+
+    c.rows.forEach((r,i)=>{ r.line = currentLine+i; });
+    currentLine += c.rows.length + page.interOffset;
+  });
+
+  downloadJSON(`page_${name.replace(/\s+/g,'_')}.json`, page);
+}
+
+function loadPage(){
+  const input = document.createElement('input'); input.type='file'; input.accept='.json';
+  input.onchange = e=>{
+    const file = e.target.files[0];
+    const fr = new FileReader();
+    fr.onload = ev=>{
+      try{
+        const loaded = JSON.parse(ev.target.result);
+        if(!loaded.components) throw 'Invalid';
+        page = loaded;
+        document.getElementById('pageName').value = page.pageName || '';
+        document.getElementById('startOffset').value = page.startOffset || 1;
+        document.getElementById('interOffset').value = page.interOffset || 0;
+        renderPageComponents();
+      } catch(err){ alert("Invalid JSON file"); }
+    };
+    fr.readAsText(file);
+  };
+  input.click();
+}
+
+function clearPage(){ if(confirm("Clear all components?")){ page={pageName:'',startOffset:1,interOffset:0,components:[]}; renderPageComponents(); }}
+
+function downloadJSON(filename,data){
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a'); a.href=url; a.download=filename; a.click();
+  URL.revokeObjectURL(url);
+}
+
+renderPageComponents();
+</script>
+
+</body>
+</html>

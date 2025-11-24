@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Component Builder</title>
+<style>
+  :root {
+    --bg: #f4f6f8;
+    --card: #fff;
+    --accent: #0078d4;
+    --accent-dark: #005a9e;
+    --muted: #6b7280;
+    --radius: 10px;
+  }
+  body { font-family: "Segoe UI", Roboto, Arial, sans-serif; background: var(--bg); margin: 20px; color: #222; }
+  .app { max-width: 1100px; margin: 0 auto; padding: 10px; }
+  .card { background: var(--card); border-radius: var(--radius); box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 16px; margin-bottom: 16px; }
+  h1 { margin: 0 0 10px 0; font-size: 20px; }
+  .controls { display: flex; gap: 8px; margin-bottom: 12px; align-items: center; }
+  button { background: var(--accent); color: #fff; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+  button.ghost { background: #f0f0f0; color: #111; border: 1px solid #e5e7eb; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 8px; border-bottom: 1px solid #e0e0e0; text-align: left; font-size: 13px; vertical-align: middle; }
+  th { background: #f8fafc; color: var(--muted); font-weight: 600; }
+  input[type=text], select { width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #d1d5db; }
+  input[type=checkbox] { transform: scale(1.2); cursor: pointer; }
+  .dragging { opacity: 0.5; }
+  .alt-text { background:#eef2f8; font-style: italic; }
+  .minmax-container { display: flex; gap: 6px; margin-top: 4px; }
+  .minmax-container input { width: 50%; padding: 4px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <div class="card">
+    <h1>Component Builder</h1>
+    <div class="controls">
+      <button onclick="saveComponent()">Save Component</button>
+      <button class="ghost" onclick="loadComponent()">Load Component</button>
+      <button class="ghost" onclick="clearComponent()">Clear All</button>
+      <input type="text" id="componentName" placeholder="Component Name" style="margin-left:auto;">
+    </div>
+
+    <table id="componentTable">
+      <thead>
+        <tr>
+          <th style="width:50px">Line</th>
+          <th>Field Name</th>
+          <th style="width:160px">Type</th>
+          <th style="width:80px">Required</th>
+          <th style="width:80px">SEO</th>
+          <th style="width:150px">Limits</th>
+          <th style="width:80px">Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div style="margin-top:10px;">
+      <button onclick="addRow()">Add Row</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+let component = { name: '', rows: [] };
+
+/* ---------- Utility ---------- */
+function el(tag, attrs={}, ...children){
+  const e=document.createElement(tag);
+  for(const k in attrs) e.setAttribute(k, attrs[k]);
+  children.forEach(c=>{
+    if(typeof c==='string') e.appendChild(document.createTextNode(c));
+    else if(c) e.appendChild(c);
+  });
+  return e;
+}
+
+/* ---------- Render Table ---------- */
+function renderTable(){
+  const tbody = document.querySelector("#componentTable tbody");
+  tbody.innerHTML = '';
+  let lineNum = 1;
+
+  component.rows.forEach((row, idx)=>{
+    const tr = el('tr');
+    tr.dataset.index = idx;
+    if(row.altLinked) tr.classList.add('alt-text');
+
+    // Line number
+    tr.appendChild(el('td', {}, String(lineNum++)));
+
+    // Field Name
+    const nameTd = el('td');
+    const nameInput = el('input', { type:'text', value: row.name || '' });
+    if(row.altLinked) nameInput.readOnly = true;
+    nameInput.addEventListener('input', e=>{ component.rows[idx].name=e.target.value; });
+    nameTd.appendChild(nameInput);
+    tr.appendChild(nameTd);
+
+    // Type selector
+    const typeTd = el('td');
+    const select = el('select');
+    ['Not Empty','URL','Image','YES/NO','Tech info'].forEach(t=>{
+      const opt = el('option', { value:t }, t);
+      if(row.type===t) opt.selected=true;
+      select.appendChild(opt);
+    });
+    if(row.altLinked) select.disabled = true;
+    select.addEventListener('change', e=>{
+      component.rows[idx].type = e.target.value;
+      handleImageAlt(idx);
+      renderTable();
+    });
+    typeTd.appendChild(select);
+
+    // Tech info color selector
+    if(row.type === 'Tech info'){
+      const colorSelect = el('select', { style:'margin-top:4px;' });
+      [
+        { label:'Orange', hex:'#FFA500' },
+        { label:'Gray', hex:'#808080' },
+        { label:'White', hex:'#FFFFFF' }
+      ].forEach(opt=>{
+        const o = el('option', { value: opt.hex }, opt.label);
+        if(row.color === opt.hex) o.selected = true;
+        colorSelect.appendChild(o);
+      });
+      colorSelect.addEventListener('change', e=>{
+        component.rows[idx].color = e.target.value;
+      });
+      if(!row.color) row.color = '#FFA500';
+      typeTd.appendChild(colorSelect);
+    }
+
+    tr.appendChild(typeTd);
+
+    // Required
+    const reqTd = el('td');
+    const reqChk = el('input', { type:'checkbox' });
+    if(row.altLinked || row.type==='Tech info'){
+      reqChk.style.display='none';
+    } else if(row.type==='Image' && component.rows[idx+1] && component.rows[idx+1].altLinked){
+      reqChk.checked = (row.required!==false);
+      reqChk.addEventListener('change', e=>{
+        component.rows[idx].required = reqChk.checked;
+        component.rows[idx+1].required = reqChk.checked;
+        renderTable();
+      });
+    } else {
+      reqChk.checked = (row.required!==false);
+      reqChk.addEventListener('change', e=>{ component.rows[idx].required = reqChk.checked; });
+    }
+    reqTd.appendChild(reqChk);
+    tr.appendChild(reqTd);
+
+    // SEO Checkbox
+    const seoTd = el('td');
+    const seoChk = el('input', { type:'checkbox' });
+    seoChk.checked = !!row.seo;
+    seoChk.addEventListener('change', e=>{ component.rows[idx].seo = seoChk.checked; });
+    seoTd.appendChild(seoChk);
+    tr.appendChild(seoTd);
+
+    // Min/Max limits for Not Empty
+    const limitTd = el('td');
+    if(row.type === 'Not Empty'){
+      const minmax = el('div', { class:'minmax-container' });
+      const minInput = el('input', { type:'text', placeholder:'Min', value: row.minLength || '' });
+      const maxInput = el('input', { type:'text', placeholder:'Max', value: row.maxLength || '' });
+      minInput.addEventListener('input', e=>{ component.rows[idx].minLength = e.target.value; });
+      maxInput.addEventListener('input', e=>{ component.rows[idx].maxLength = e.target.value; });
+      minmax.appendChild(minInput);
+      minmax.appendChild(maxInput);
+      limitTd.appendChild(minmax);
+    }
+    tr.appendChild(limitTd);
+
+    // Actions
+    const actionTd = el('td');
+    const delBtn = el('button', { class:'ghost' }, 'Remove');
+    delBtn.addEventListener('click', ()=>{ removeRow(idx); });
+    actionTd.appendChild(delBtn);
+    tr.appendChild(actionTd);
+
+    tbody.appendChild(tr);
+  });
+
+  attachDragEvents();
+}
+
+/* ---------- Drag & Drop ---------- */
+let dragSrcIndex = null;
+function onDragOver(e){ e.preventDefault(); const dragging=document.querySelector('.dragging'); if(!dragging||dragging===this)return; const rect=this.getBoundingClientRect(); const next=(e.clientY-rect.top)>rect.height/2; const tbody=this.parentNode; if(next)tbody.insertBefore(dragging,this.nextSibling); else tbody.insertBefore(dragging,this); }
+function attachDragEvents(){
+  const tbody = document.querySelector("#componentTable tbody");
+  tbody.querySelectorAll('tr').forEach((tr,i)=>{
+    const row = component.rows[i];
+    if(row.altLinked) return;
+    tr.draggable = true;
+    tr.addEventListener('dragstart',()=>{ dragSrcIndex=i; tr.classList.add('dragging'); });
+    tr.addEventListener('dragend',()=>{ tr.classList.remove('dragging'); reorderRows(); });
+    tr.addEventListener('dragover',onDragOver);
+  });
+  tbody.ondragover=e=>e.preventDefault();
+}
+function reorderRows(){
+  const tbody=document.querySelector("#componentTable tbody");
+  const newRows=[];
+  tbody.querySelectorAll('tr').forEach(tr=>{ const idx=parseInt(tr.dataset.index); newRows.push(component.rows[idx]); });
+  component.rows=newRows; renderTable();
+}
+
+/* ---------- Row Management ---------- */
+function addRow(){ component.rows.push({ name:'', type:'Not Empty', required:true }); renderTable(); }
+function removeRow(idx){
+  const row=component.rows[idx];
+  if(row.altLinked){ alert("Alt-text row is linked to Image and cannot be removed separately."); return; }
+  if(component.rows[idx+1] && component.rows[idx+1].altLinked){ component.rows.splice(idx,2); }
+  else { component.rows.splice(idx,1); }
+  renderTable();
+}
+function handleImageAlt(idx){
+  const row=component.rows[idx];
+  if(row.type==='Image'){
+    if(!component.rows[idx+1] || !component.rows[idx+1].altLinked){
+      component.rows.splice(idx+1,0,{ name:'Alt-text', type:'Not Empty', required: row.required, altLinked:true });
+    } else component.rows[idx+1].required=row.required;
+  } else if(component.rows[idx+1] && component.rows[idx+1].altLinked){ component.rows.splice(idx+1,1); }
+}
+
+/* ---------- Save / Load / Clear ---------- */
+function saveComponent(){
+  const name=document.getElementById('componentName').value.trim();
+  if(!name){ alert("Enter component name"); return; }
+  component.name=name;
+  downloadJSON(`component_${name.replace(/\s+/g,'_')}.json`,component);
+}
+function loadComponent(){
+  const input=document.createElement('input'); input.type='file'; input.accept='.json';
+  input.onchange=e=>{
+    const file=e.target.files[0];
+    const fr=new FileReader();
+    fr.onload=ev=>{
+      try{ const loaded=JSON.parse(ev.target.result);
+        if(!loaded.rows) throw 'Invalid';
+        component=loaded;
+        document.getElementById('componentName').value=component.name||'';
+        renderTable();
+      }catch(err){ alert("Invalid JSON file"); }
+    };
+    fr.readAsText(file);
+  };
+  input.click();
+}
+function clearComponent(){ if(confirm("Clear all rows?")) component={ name:'', rows:[] }; renderTable(); }
+
+/* ---------- Helper ---------- */
+function downloadJSON(filename,data){
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url; a.download=filename; a.click(); URL.revokeObjectURL(url);
+}
+
+/* ---------- Initial Render ---------- */
+renderTable();
+</script>
+</body>
+</html>
