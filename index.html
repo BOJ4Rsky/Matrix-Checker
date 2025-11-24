@@ -832,13 +832,13 @@ function runCheck(){
       if (allErrors > 0) reasons.push(`${allErrors} unresolved error(s)`);
 
       if (reasons.length > 0) {
-          overallNode.textContent = `❌ File NOT ready for automation: ${reasons.join('; ')}`;
+          overallNode.textContent = `❌ Matrix NOT ready for implementation: ${reasons.join('; ')}`;
           overallNode.style.color = 'red';
       } else if (allWarns > 0) {
-          overallNode.textContent = `⚠️ File ready but with warnings (${allWarns})`;
+          overallNode.textContent = `⚠️ Matrix ready but with warnings (${allWarns})`;
           overallNode.style.color = 'orange';
       } else {
-          overallNode.textContent = '✅ File ready for automation';
+          overallNode.textContent = '✅ Matrix ready for implementation';
           overallNode.style.color = 'green';
       }
 
@@ -1137,6 +1137,7 @@ backToTopBtn.addEventListener("click", () => {
 
 </body>
 </html>
+
 
 
 
